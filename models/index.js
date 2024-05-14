@@ -1,14 +1,34 @@
-const User = require("./User");
-const Stadium = require("./Stadium");
+const User = require('./User');
+const Post = require('./Post');
+const Stadium = require('./Stadium');
+const UserStadium = require('./UserStadium');
+
+User.hasMany(Post, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Post.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Stadium.hasMany(Post, {
+  foreignKey: 'stadium_id',
+  onDelete: 'CASCADE'
+});
+
+Post.belongsTo(Stadium, {
+  foreignKey: 'stadium_id'
+});
 
 User.belongsToMany(Stadium, {
-  through: "user_stadiums",
-  foreignKey: "user_id",
+  through: UserStadium,
+  foreignKey: 'user_id'
 });
 
 Stadium.belongsToMany(User, {
-  through: "user_stadiums",
-  foreignKey: "stadium_id",
+  through: UserStadium,
+  foreignKey: 'stadium_id'
 });
 
-module.exports = { User, Stadium };
+module.exports = { User, Post, Stadium, UserStadium };
