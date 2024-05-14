@@ -5,7 +5,7 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const stadiumData = await Stadium.findAll({
-      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state'],
+      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state']
     });
 
     // Serialize data so the template can read it
@@ -19,11 +19,11 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/stadium/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     // Find a single stadium by its ID
     const stadiumData = await Stadium.findByPk(req.params.id, {
-      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state'],
+      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state']
     });
 
     // Serialize the data so the template can read it

@@ -18,6 +18,9 @@ Stadium.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    division: {
+      type: DataTypes.STRING,
+    },
     city: {
       type: DataTypes.STRING,
     },
