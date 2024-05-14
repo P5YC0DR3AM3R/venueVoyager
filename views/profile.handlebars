@@ -1,28 +1,48 @@
-{{> header}}
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
 
-<main class="profile-page">
-  <section class="profile-section">
-    <h1>Profile</h1>
-    <div class="profile-info">
-      <h2>Welcome, {{name}}</h2>
-      <p>Email: {{email}}</p>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New stadium:</h3>
+
+    <form class="form new-stadium-form">
+      <div class="form-group">
+        <label for="stadium-name">stadium name:</label>
+        <input class="form-input" type="text" id="stadium-name" name="stadium-name" />
+      </div>
+      <div class="form-group">
+        <label for="stadium-funding">needed funding ($):</label>
+        <input class="form-input" type="number" id="stadium-funding" name="stadium-funding" />
+      </div>
+      <div class="form-group">
+        <label for="stadium-desc">description:</label>
+        <textarea class="form-input" id="stadium-desc" name="stadium-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if stadiums.length}}
+  <div class="col-md-6 stadium-list">
+    <h3>Current stadiums:</h3>
+
+    {{#each stadiums as |stadium|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/stadium/{{stadium.id}}">{{stadium.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{stadium.id}}">DELETE</button>
+      </div>
     </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
 
-    <section class="user-posts-section">
-      <h3>Your Posts</h3>
-      <ul class="user-posts-list">
-        {{#each posts}}
-          <li class="user-post-item">
-            <div class="post-content">{{content}}</div>
-            <div class="post-rating">Rated: {{rating}} stars at {{stadium.name}}</div>
-            <button class="delete-post-button" data-id="{{id}}">Delete</button>
-          </li>
-        {{/each}}
-      </ul>
-    </section>
-
-    <a class="logout-button" href="/logout">Logout</a>
-  </section>
-</main>
-
-{{> footer}}
+<script src="./js/profile.js"></script>
