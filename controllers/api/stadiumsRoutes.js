@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Stadium } = require('../../models');
+const { getStadiumImages } = require('../../utils/wiki');
 
 router.get('/', async (req, res) => {
   try {
@@ -34,6 +35,22 @@ router.get('/stadium/:id', async (req, res) => {
 
   } catch (err) {
     res.status(500).json(err);
+  }
+});
+
+router.get('/stadium-images/:name', async (req, res) => {
+  const stadiumName = req.params.name;
+
+  try {
+    const stadium = await Stadium.findOne({ where: { stadium: stadiumName } });
+    if (!stadium) {
+      return res.status(404).json({ message: 'Stadium not found' });
+    }
+
+    const images = await getStadiumImages(stadiumName);
+    res.json(images);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching images', error });
   }
 });
 
