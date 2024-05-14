@@ -7,16 +7,10 @@ router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-        {
-          model: Stadium,
-          attributes: ['stadium', 'location', 'image'],
-        },
+          { model: User, attributes: ['name'] },
+          { model: Stadium, attributes: ['stadium', 'league', 'city', 'state', 'team', 'image'] },
       ],
-    });
+  });   
 
     const posts = postData.map((post) => post.get({ plain: true }));
     console.log("Posts data:", posts);
