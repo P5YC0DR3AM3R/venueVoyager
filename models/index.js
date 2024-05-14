@@ -11,4 +11,4 @@ Stadium.belongsToMany(User, {
   foreignKey: "stadium_id",
 });
 
-module.exports = { User, Stadium, Team };
+module.exports = { User, Stadium };
