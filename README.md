@@ -68,7 +68,7 @@ Email the author for more information about how to contribute to the project, or
 deployment, CRUD tests, insomnia, pgAdmin
 
 ## Questions
-For any questions, please contact me at [micahreadmgmt@gmail.com - dmharrison2014@gmail.com - ryan@email.com](mailto:micahreadmgmt@gmail.com - dmharrison2014@gmail.com - ryan@email.com).
+For any questions, please contact me at [micahreadmgmt@gmail.com - dmharrison2014@gmail.com - ryan@email.com](mailto:micahreadmgmt@gmail.com - dmharrison2014@gmail.com - ryanh118@gmail.com).
 
 ---
 
