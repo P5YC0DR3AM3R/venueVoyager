@@ -48,10 +48,17 @@ router.get('/stadium-images/:name', async (req, res) => {
     }
 
     const images = await getStadiumImages(stadiumName);
-    res.json(images);
+
+    if (images.length > 0) {
+      console.log(images[0].url);
+      res.json({ selectedImage: images[0].url });
+    } else {
+      res.status(404).json({ message: 'Not enough images found' });
+    }
   } catch (error) {
     res.status(500).json({ message: 'Error fetching images', error });
   }
 });
 
 module.exports = router;
+
