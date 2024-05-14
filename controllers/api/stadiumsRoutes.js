@@ -5,7 +5,7 @@ const { getStadiumImages } = require('../../utils/wiki');
 router.get('/', async (req, res) => {
   try {
     const stadiumData = await Stadium.findAll({
-      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state'],
+      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state']
     });
 
     const stadiums = stadiumData.map((stadium) => stadium.get({ plain: true }));
@@ -16,10 +16,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/stadium/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const stadiumData = await Stadium.findByPk(req.params.id, {
-      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state'],
+      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state']
     });
 
     const stadium = stadiumData.get({ plain: true });
