@@ -1,8 +1,8 @@
-const sequelize = require('../config/connection');
-const { User, Stadium } = require('../models');
+const sequelize = require("../config/connection");
+const { User, Stadium } = require("../models");
 
-const userData = require('./userData.json');
-const stadiumData = require('./stadiumData.json');
+const userData = require("./userData.json");
+const stadiumData = require("./stadiumData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,7 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const Stadium of stadiumData) {
+  for (const stadium of stadiumData) {
     await Stadium.create({
       ...stadium,
       user_id: users[Math.floor(Math.random() * users.length)].id,
