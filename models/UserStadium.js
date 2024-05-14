@@ -18,6 +18,20 @@ UserStadium.init(
           review: {
             type: DataTypes.STRING,
           },
+          user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
+          },
+          stadium_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'stadium',
+                key: 'id',
+              },
+          },
     }, 
     {
         sequelize,
