@@ -1,14 +1,23 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
+{{> header}}
+
+<main class="stadium-page">
+  <section class="stadium-info-section">
+    <h1>{{name}}</h1>
+    <img class="stadium-image" src="{{image}}" alt="{{name}}">
+    <p>Location: {{location}}</p>
+  </section>
+
+  <section class="stadium-posts-section">
+    <h2>Posts</h2>
+    <ul class="stadium-posts-list">
+      {{#each posts as |post|}}
+        <li class="stadium-post-item">
+          <div class="post-content">{{post.content}}</div>
+          <div class="post-rating">Rated: {{post.rating}} stars by {{post.user.name}}</div>
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+</main>
+
+{{> footer}}
