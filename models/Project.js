@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Stadium extends Model {}
 
-Project.init(
+Stadium.init(
   {
-    id: {
+    stadium_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -15,19 +15,20 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    location_city: {
       type: DataTypes.STRING,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+    location_state: {
+      type: DataTypes.STRING,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
+    team_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'team', 
+        key: 'id',
+      },
     },
-    user_id: {
+   user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
@@ -40,8 +41,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'stadium',
   }
 );
 
-module.exports = Project;
+module.exports = Stadium;
