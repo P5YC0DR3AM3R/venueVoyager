@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Stadium extends Model {}
 
@@ -11,28 +11,27 @@ Stadium.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    stadium: {
+      type: DataTypes.STRING,
+    },
+    league: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location_city: {
+    city: {
       type: DataTypes.STRING,
     },
-    location_state: {
+    state: {
       type: DataTypes.STRING,
     },
-    team_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'team', 
-        key: 'id',
-      },
+    team: {
+      type: DataTypes.STRING,
     },
-   user_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
   },
@@ -41,7 +40,7 @@ Stadium.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'stadium',
+    modelName: "stadium",
   }
 );
 
