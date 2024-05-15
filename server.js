@@ -9,7 +9,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-const sequelize = require('./config/connection');
+
 const { User, Post, Stadium, UserStadium } = require('./models'); // Import models to sync them in order
 
 const homeRoutes = require('./controllers/homeRoutes'); // Import Routes
