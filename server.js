@@ -10,17 +10,7 @@ const exphbs = require("express-handlebars");
 
 const sequelize = require("./config/connection");
 // Create a new sequelize store using the express-session package
-<<<<<<< HEAD
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
-const { User, Post, Stadium, UserStadium } = require('./models'); // Import models to sync them in order
-
-const homeRoutes = require('./controllers/homeRoutes'); // Import Routes
-const stadiumsRoutes = require('./controllers/api/stadiumsRoutes');
-const userRoutes = require('./controllers/api/userRoutes');
-=======
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
->>>>>>> b149fb7c017614a3f02b628b5984c322d10d80ba
 
 const app = express();
 // Specify on which port the Express.js server will run
