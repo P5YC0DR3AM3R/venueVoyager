@@ -3,13 +3,13 @@ const Stadium = require("./Stadium");
 const UserStadium = require("./UserStadium");
 
 User.belongsToMany(Stadium, {
-  through: userStadium,
+  through: UserStadium,
   foreignKey: "userId",
   otherKey: "stadiumId",
 });
 
 Stadium.belongsToMany(User, {
-  through: userStadium,
+  through: UserStadium,
   foreignKey: "stadiumId",
   otherKey: "userId",
 });
