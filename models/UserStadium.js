@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class UserStadium extends Model {}
+class userStadium extends Model {}
 
-UserStadium.init(
+userStadium.init(
     {
         date_visited: {
             type: DataTypes.DATE,
@@ -38,8 +38,8 @@ UserStadium.init(
         timestamps: false, 
         freezeTableName: true, 
         underscored: true,
-        modelName: 'user_stadiums',
+        modelName: 'userStadium',
     }
 );
 
-module.exports = UserStadium;
+module.exports = userStadium;

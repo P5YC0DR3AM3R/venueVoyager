@@ -1,0 +1,23 @@
+[
+    {
+      "date_visited": "2022-01-01",
+      "rating": 5,
+      "review": "Great stadium!",
+      "user_id": 1,
+      "stadium_id": 1
+    },
+    {
+      "date_visited": "2022-01-02",
+      "rating": 4,
+      "review": "Nice stadium!",
+      "user_id": 2,
+      "stadium_id": 2
+    },
+    {
+      "date_visited": "2022-01-03",
+      "rating": 3,
+      "review": "Okay stadium.",
+      "user_id": 3,
+      "stadium_id": 3
+    }
+  ]
