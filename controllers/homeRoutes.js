@@ -36,6 +36,23 @@ router.get("/:sport/stadiums", withAuth, async (req, res) => {
   res.render("stadiums", { sport, stadiums }); // Pass sport and stadiums data to the template
 });
 
+router.get('/api/stadiums/:id', withAuth, async (req, res) => {
+  try {
+    const stadiumData = await Stadium.findByPk(req.params.id, {
+          attributes: ['stadium', 'team', 'league', 'division', 'city', 'state']
+    });
+
+    const stadium = stadiumData.get({ plain: true });
+
+    res.render("stadiumId", {
+      ...stadium,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
