@@ -26,14 +26,14 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/posts/${id}`, { // Changed from projects to posts
+    const response = await fetch(`/api/projects/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete post'); // Changed alert message
+      alert('Failed to delete project');
     }
   }
 };
@@ -43,5 +43,5 @@ document
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list') // Change to match the class name in your Handlebars file if needed
+  .querySelector('.project-list')
   .addEventListener('click', delButtonHandler);
