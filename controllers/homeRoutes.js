@@ -28,12 +28,28 @@ router.get("/", async (req, res) => {
   res.render("homepage", { cardData, logged_in: req.session.logged_in });
 });
 
-router.get("/:sport/stadiums", withAuth, async (req, res) => {
-  const sport = req.params.sport;
-  // Replace this with your logic to fetch and display stadiums associated with the sport
-  // This is just a placeholder for now
-  const stadiums = []; // Placeholder data
-  res.render("stadiums", { sport, stadiums }); // Pass sport and stadiums data to the template
+router.get("/stadiums/:league", withAuth, async (req, res) => {
+  try {
+    const league = req.params.league;
+
+    // Find all stadiums for the chosen league
+    const stadiums = await Stadium.findAll({
+      where: { league },
+    });
+
+    // Serialize all stadiums for template rendering
+    const serializedStadiums = stadiums.map((stadium) =>
+      stadium.get({ plain: true })
+    );
+
+    res.render("leagueStadiums", {
+      stadiums: serializedStadiums, // Pass array of serialized stadiums
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.error(err); // Log the error for debugging
+    res.status(500).json({ message: "Error fetching stadiums" }); // Provide user-friendly error message
+  }
 });
 
 router.get('/api/stadiums/:id', withAuth, async (req, res) => {
