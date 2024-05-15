@@ -21,7 +21,8 @@ CREATE TABLE stadiums (
   division VARCHAR(50),
   city VARCHAR(50) NOT NULL,
   state VARCHAR(50) NOT NULL,
-  location VARCHAR(100),
+  latitude VARCHAR(100),
+  logitude VARCHAR(100),
   image VARCHAR(255)
 );
 

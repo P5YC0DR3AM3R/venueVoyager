@@ -1,42 +1,50 @@
 const router = require('express').Router();
 const { Stadium } = require('../../models');
+const wiki = require('wikipedia');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const stadiumData = await Post.findAll({
-      include: [
-          { model: User, attributes: ['name'] },
-          { model: Stadium, attributes: ['stadium', 'league', 'city', 'state', 'team', 'image'] }, // Include existing columns
-      ],
-  });
+    const stadiumData = await Stadium.findAll({
+      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state', 'image'],
+    });
 
-    // Serialize data so the template can read it
     const stadiums = stadiumData.map((stadium) => stadium.get({ plain: true }));
-
-    // Send the serialized data as JSON
     res.json(stadiums);
-
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/stadium/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-      const stadiumData = await Stadium.findByPk(req.params.id, {
-          include: [
-              { model: Post, include: [{ model: User, attributes: ['name'] }] },
-          ],
-      });
+    const stadiumData = await Stadium.findByPk(req.params.id, {
+      attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state', 'image'],
+    });
 
-    // Serialize the data so the template can read it
+    if (!stadiumData) {
+      res.status(404).json({ message: 'No stadium found with this id' });
+      return;
+    }
+
     const stadium = stadiumData.get({ plain: true });
 
-    // Send the serialized data as JSON
-    res.json(stadium);
+    // Fetch image from Wikipedia
+    try {
+      const page = await wiki.page(stadium.stadium);
+      const images = await page.images();
+      const mainImage = images.length > 0 ? images[0].url : null;
+      stadium.image = mainImage;
+    } catch (error) {
+      console.log('Error fetching image from Wikipedia:', error);
+      stadium.image = null;
+    }
 
+    res.render('stadium', {
+      ...stadium,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
+    console.error('Error rendering stadium page:', err);
     res.status(500).json(err);
   }
 });

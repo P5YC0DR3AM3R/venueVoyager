@@ -60,7 +60,7 @@ router.get('/profile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Post, include: [{ model: Stadium, attributes: ['stadium', 'location', 'image'] }] }],
+      include: [{ model: Post, include: [{ model: Stadium, attributes: ['stadium', 'team', 'city', 'state', 'image'] }] }],
     });
 
     if (!userData) {

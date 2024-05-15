@@ -51,11 +51,12 @@ app.use('/api/stadiums', stadiumsRoutes); // Mount stadiums routes under /api/st
 app.use('/api/users', userRoutes);         // Mount user routes under /api/users
 
 // Synchronize the models in the correct order
-sequelize.sync({ force: true })
-    .then(() => {
-        console.log('All models synced successfully.');
-        app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));
-    })
-    .catch(err => {
-        console.error('Error starting server:', err);
-    });
+sequelize.sync()
+  .then(() => {
+    console.log('All models were synchronized successfully.');
+    app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
+  })
+  .catch(err => {
+    console.error('Unable to synchronize models:', err);
+  });
+
