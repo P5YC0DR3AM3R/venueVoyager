@@ -22,10 +22,21 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+.stadium-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.stadium-card{
-  width: 300px; 
-  height: 400px
+.stadium-card {
+  flex: 1 1 300px; 
+  margin: 10px; 
+  
+}
+
+.stadium-card img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
 }
 
 .img-box{
