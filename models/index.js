@@ -1,14 +1,17 @@
 const User = require("./User");
 const Stadium = require("./Stadium");
+const userStadium = require('./UserStadium');
 
 User.belongsToMany(Stadium, {
-  through: "user_stadiums",
-  foreignKey: "user_id",
+  through: userStadium,
+  foreignKey: 'userId',
+  otherKey: 'stadiumId'
 });
 
 Stadium.belongsToMany(User, {
-  through: "user_stadiums",
-  foreignKey: "stadium_id",
+  through: userStadium,
+  foreignKey: 'stadiumId',
+  otherKey: 'userId'
 });
 
-module.exports = { User, Stadium };
+module.exports = { User, Stadium, userStadium};
