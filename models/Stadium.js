@@ -13,6 +13,11 @@ Stadium.init(
     },
     stadium: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    team: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     league: {
       type: DataTypes.STRING,
@@ -20,15 +25,19 @@ Stadium.init(
     },
     division: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     city: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     state: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
-    team: {
+    image: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,

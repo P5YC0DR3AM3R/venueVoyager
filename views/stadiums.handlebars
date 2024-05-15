@@ -1,3 +1,31 @@
+{{> header}}
+
+<main>
+  <h2>{{stadium}}</h2>
+  <p>Team: {{team}}</p>
+  <p>League: {{league}}</p>
+  <p>Division: {{division}}</p>
+  <p>City: {{city}}</p>
+  <p>State: {{state}}</p>
+  {{#if image}}
+    <img src="{{image}}" alt="{{stadium}}">
+  {{else}}
+    <p>No image available</p>
+  {{/if}}
+
+  <h3>Comments</h3>
+  <ul>
+    {{#each posts}}
+      <li>
+        <p>{{this.content}}</p>
+        <p>Posted by {{this.user.name}} at {{format_date this.created_at}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</main>
+
+{{> footer}}
+=======
 <div class="text-center">
   <h2>{{name}}</h2>
   <p>{{{get_emoji}}}</p>
