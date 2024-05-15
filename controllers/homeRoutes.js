@@ -1,82 +1,69 @@
-const router = require('express').Router();
-const { Project, User } = require('../models');
-const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const { Stadium, User } = require("../models");
+const withAuth = require("../utils/auth");
 
-router.get('/', async (req, res) => {
-  try {
-    // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+router.get("/", async (req, res) => {
+  const cardData = [
+    {
+      title: "MLB",
 
-    // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+      logo: "https://wordsabovereplacement.com/wp-content/uploads/2020/06/mlb.png",
+    },
+    {
+      title: "NFL",
 
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      projects, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+      logo: "https://1000logos.net/wp-content/uploads/2017/05/NFL-logo-500x338.png",
+    },
+    {
+      title: "NBA",
+
+      logo: "https://1000logos.net/wp-content/uploads/2017/04/Logo-NBA-500x313.png",
+    },
+    {
+      title: "NHL",
+
+      logo: "https://1000logos.net/wp-content/uploads/2017/05/NHL-Logo-500x333.png",
+    },
+  ];
+  res.render("homepage", { cardData, logged_in: req.session.logged_in });
 });
 
-router.get('/project/:id', async (req, res) => {
-  try {
-    const projectData = await Project.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const project = projectData.get({ plain: true });
-
-    res.render('project', {
-      ...project,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get("/:sport/stadiums", withAuth, async (req, res) => {
+  const sport = req.params.sport;
+  // Replace this with your logic to fetch and display stadiums associated with the sport
+  // This is just a placeholder for now
+  const stadiums = []; // Placeholder data
+  res.render("stadiums", { sport, stadiums }); // Pass sport and stadiums data to the template
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      attributes: { exclude: ["password"] },
+      // include: [{ model: Stadium, through: "user_stadiums" }],
     });
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render("profile", {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+// Route to handle stadium listing for a specific sport (placeholder)
 
-router.get('/login', (req, res) => {
+router.get("/login", async (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect("/profile");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
