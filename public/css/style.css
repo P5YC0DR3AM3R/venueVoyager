@@ -1,24 +1,178 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+/* Primary Colors */
+:root {
+  --primary-color: #CC0000;
+  --secondary-color: #000000;
+  --accent-color-light: #EFEFEF;
+  --accent-color-dark: #333333;
+  --text-color: #FFFFFF;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
+/* General Styling */
+body {
+  background-color: var(--accent-color-light);
+  color: var(--secondary-color);
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: var(--text-color);
+  margin: 0 10px;
   text-decoration: none;
-  font-size: 100%;
 }
 
-.no-button:hover {
-  color: #065b83;
+nav a:hover {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.main-content {
+  padding: 20px;
+  background-color: var(--accent-color-light);
+  border: 1px solid var(--accent-color-dark);
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color-dark);
+}
+
+/* Forms */
+form {
+  background-color: var(--text-color);
+  padding: 20px;
+  border: 1px solid var(--accent-color-dark);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--accent-color-dark);
+}
+
+/* Ratings */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+  color: var(--accent-color-dark);
+}
+
+/* post Section */
+.posts {
+  background-color: var(--accent-color-light);
+  padding: 10px;
+  border: 1px solid var(--accent-color-dark);
+  margin: 20px 0;
+}
+
+.post {
+  border-bottom: 1px solid var(--accent-color-dark);
+  padding: 10px 0;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+/* Add to style.css or jass.css */
+
+/* Rotating card styles */
+.rotating-card-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.rotating-card {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.rotating-card:hover {
+  transform: rotateY(180deg);
+}
+
+.rotating-card-front,
+.rotating-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #EFEFEF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #FFFFFF;
+}
+
+.rotating-card-back {
+  transform: rotateY(180deg);
+}
+
+/* League logo carousel styles */
+.league-logo-carousel {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+.league-logo {
+  width: 100px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.league-logo:hover {
+  transform: scale(1.1);
 }

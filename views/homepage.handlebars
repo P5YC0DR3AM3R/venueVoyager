@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sports Log App</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <main class="main-content">
+    <h2>Welcome to Venue Voyager</h2>
+    <p>Discover and rate the best professional stadiums in the USA.</p>
+  </main>
+
   <h1>Pick Your League</h1>
   <div class="card-container">
     {{#each cardData}}
-      <a href="/{{this.title}}/stadiums">  <div class="card">
-          <img src="{{ this.logo }}" alt="{{ this.title }} Logo">  <h3>{{ this.title }}</h3>
-          <p>{{ this.description }}</p>
-        </div>
-      </a>
+    <a href="/{{this.title}}/stadiums">
+      <div class="card">
+        <img src="{{ this.logo }}" alt="{{ this.title }} Logo">
+        <h3>{{ this.title }}</h3>
+        <p>{{ this.description }}</p>
+      </div>
+    </a>
     {{/each}}
   </div>
 </body>
+
 </html>

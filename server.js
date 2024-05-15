@@ -12,9 +12,6 @@ const sequelize = require('./config/connection');
 // Create a new sequelize store using the express-session package
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
-
 const { User, Post, Stadium, UserStadium } = require('./models'); // Import models to sync them in order
 
 const homeRoutes = require('./controllers/homeRoutes'); // Import Routes
