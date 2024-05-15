@@ -7,12 +7,10 @@ router.get('/', async (req, res) => {
     // Get all projects and JOIN with user data
     const projectData = await Project.findAll({
       include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
+          { model: User, attributes: ['name'] },
+          { model: Stadium, attributes: ['stadium', 'league', 'city', 'state', 'team', 'image'] },
       ],
-    });
+  });   
 
     // Serialize data so the template can read it
     const projects = projectData.map((project) => project.get({ plain: true }));
@@ -55,7 +53,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Post, include: [{ model: Stadium, attributes: ['stadium', 'team', 'city', 'state', 'image'] }] }],
     });
 
     const user = userData.get({ plain: true });

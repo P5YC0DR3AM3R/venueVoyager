@@ -12,7 +12,15 @@ const sequelize = require('./config/connection');
 // Create a new sequelize store using the express-session package
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// Initialize an instance of Express.js
+const routes = require('./controllers');
+const helpers = require('./utils/helpers');
+
+const { User, Post, Stadium, UserStadium } = require('./models'); // Import models to sync them in order
+
+const homeRoutes = require('./controllers/homeRoutes'); // Import Routes
+const stadiumsRoutes = require('./controllers/api/stadiumsRoutes');
+const userRoutes = require('./controllers/api/userRoutes');
+
 const app = express();
 // Specify on which port the Express.js server will run
 const PORT = process.env.PORT || 3001;
@@ -58,9 +66,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Servers the routes to the server
 app.use(routes);
 
-// Starts the server to begin listening
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () =>
-    console.log(`Now listening on http://localhost:${PORT}`)
-  );
-});
+// Synchronize the models in the correct order
+sequelize.sync()
+  .then(() => {
+    console.log('All models were synchronized successfully.');
+    app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
+  })
+  .catch(err => {
+    console.error('Unable to synchronize models:', err);
+  });
