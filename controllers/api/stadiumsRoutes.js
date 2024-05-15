@@ -9,6 +9,8 @@ router.get('/', async (req, res) => {
     });
 
     const stadiums = stadiumData.map((stadium) => stadium.get({ plain: true }));
+
+    // Send the serialized data as JSON
     res.json(stadiums);
   } catch (err) {
     res.status(500).json(err);
@@ -21,31 +23,37 @@ router.get('/:id', async (req, res) => {
       attributes: ['stadium_id', 'stadium', 'team', 'league', 'division', 'city', 'state', 'image'],
     });
 
-    if (!stadiumData) {
-      res.status(404).json({ message: 'No stadium found with this id' });
-      return;
-    }
-
+    // Serialize the data so the template can read it
     const stadium = stadiumData.get({ plain: true });
 
-    // Fetch image from Wikipedia
-    try {
-      const page = await wiki.page(stadium.stadium);
-      const images = await page.images();
-      const mainImage = images.length > 0 ? images[0].url : null;
-      stadium.image = mainImage;
-    } catch (error) {
-      console.log('Error fetching image from Wikipedia:', error);
-      stadium.image = null;
-    }
+    // Send the serialized data as JSON
+    res.json(stadium);
 
-    res.render('stadium', {
-      ...stadium,
-      logged_in: req.session.logged_in
-    });
   } catch (err) {
     console.error('Error rendering stadium page:', err);
     res.status(500).json(err);
+  }
+});
+
+router.get('/stadium-images/:name', async (req, res) => {
+  const stadiumName = req.params.name;
+
+  try {
+    const stadium = await Stadium.findOne({ where: { stadium: stadiumName } });
+    if (!stadium) {
+      return res.status(404).json({ message: 'Stadium not found' });
+    }
+
+    const images = await getStadiumImages(stadiumName);
+
+    if (images.length > 0) {
+      console.log(images[0].url);
+      res.json({ selectedImage: images[0].url });
+    } else {
+      res.status(404).json({ message: 'Not enough images found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching images', error });
   }
 });
 
