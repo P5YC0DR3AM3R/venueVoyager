@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Stadium, User } = require("../models");
 const withAuth = require("../utils/auth");
+const wiki = require('wikipedia');
 
 router.get("/", async (req, res) => {
   const cardData = [
@@ -41,6 +42,11 @@ router.get("/stadiums/:league", withAuth, async (req, res) => {
     const serializedStadiums = stadiums.map((stadium) =>
       stadium.get({ plain: true })
     );
+    // const page = await wiki.page(stadium.stadium);
+    // const images = await page.images();
+    // stadium.image = images[1];
+    // console.log(`${images[1]} image should be here`);
+    // console.log(page.images());
 
     res.render("leagueStadiums", {
       stadiums: serializedStadiums, // Pass array of serialized stadiums
@@ -55,10 +61,15 @@ router.get("/stadiums/:league", withAuth, async (req, res) => {
 router.get('/api/stadiums/:id', withAuth, async (req, res) => {
   try {
     const stadiumData = await Stadium.findByPk(req.params.id, {
-          attributes: ['stadium', 'team', 'league', 'division', 'city', 'state']
+          attributes: ['stadium', 'team', 'league', 'division', 'city', 'state', 'image']
     });
 
     const stadium = stadiumData.get({ plain: true });
+
+    const page = await wiki.page(stadium.stadium);
+    const images = await page.images();
+    stadium.image = images[4].url;
+    console.log(`${images[4].url} image should be here`);
 
     res.render("stadiumId", {
       ...stadium,

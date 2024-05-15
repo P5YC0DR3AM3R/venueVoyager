@@ -1,11 +1,11 @@
 <div class="stadium-card">
-    {{#if image}}
-    <img src="{{image}}" alt="{{this.stadium}}">
+    {{#if this.image}}
+    <img src="{{this.image}}" alt="{{this.stadium}}">
   {{else}}
     <p>No image available</p>
   {{/if}}
     <h3>{{ this.stadium }}</h3>
   <p>{{ this.team }} - {{ this.league }}</p>
   <p>{{ this.city }}, {{ this.state }}</p>
-  <a href="#{{this.stadium_id}}">View Details</a>
+  <a href="/api/stadiums/{{this.stadium_id}}">View Details</a>
 </div>
