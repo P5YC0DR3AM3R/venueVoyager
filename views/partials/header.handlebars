@@ -1,9 +1,17 @@
-<header>
-    <h1>Venue Voyager</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/profile">Profile</a>
-        <a href="/login">Login</a>
-        <a href="/stadiums">Stadiums</a>
-    </nav>
-</header>
+  <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Venue Voyager</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="btn-no-style"><a href="/">Home</a></li>
+          <li><a href="/profile">Profile</a></li>
+          {{#if logged_in}}
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+          <li><a href="/login">Login/Signup</a></li>
+          {{/if}}
+        </ul>
+      </div>
+  </header>

@@ -17,6 +17,7 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+ 
 body {
   margin: 0;
 }
@@ -33,7 +34,7 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
+  font-size: 4em;
   margin: 0.67em 0;
 }
 
@@ -358,7 +359,7 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 16px;
-  color: #1a1a1a;
+  color: white;
 }
 
 h1,
@@ -1081,7 +1082,6 @@ a:hover {
 }
 
 .card {
-  border: none;
   margin-bottom: 1rem;
 }
 
