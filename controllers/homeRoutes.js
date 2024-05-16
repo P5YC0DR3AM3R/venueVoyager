@@ -99,7 +99,7 @@ router.get("/api/stadiums/:id", withAuth, async (req, res) => {
 
     const stadium = stadiumData.get({ plain: true });
 
-    const page = await wiki.page(stadium.stadium);
+    const page = await wiki.page(stadium.stadium, stadium.team);
     const images = await page.images();
     stadium.image = images[4].url;
     console.log(`${images[4].url} image should be here`);

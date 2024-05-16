@@ -4,22 +4,36 @@
   </div>
 </div>
 
-{{!-- <div class="row mt-4">
+<div class="row mt-4">
   <div class="col-md-6">
     <h3>Create a New stadium:</h3>
 
     <form class="form new-stadium-form">
       <div class="form-group">
-        <label for="stadium-name">stadium name:</label>
+        <label for="stadium-name">Stadium Name:</label>
         <input class="form-input" type="text" id="stadium-name" name="stadium-name" />
       </div>
-      <div class="form-group">
-        <label for="stadium-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="stadium-funding" name="stadium-funding" />
-      </div>
-      <div class="form-group">
-        <label for="stadium-desc">description:</label>
-        <textarea class="form-input" id="stadium-desc" name="stadium-desc"></textarea>
+      {{!-- <div class="form-group">
+        <label for="stadium-rating">Rating:</label>
+        <input class="form-input" type="number" id="stadium-rating" name="stadium-rating" />
+      </div> --}}
+<p>Rating</p>
+    <div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+  </div>
+      
+     <div class="form-group">
+        <label for="stadium-review">Review:</label>
+        <textarea class="form-input" id="stadium-review" name="stadium-review"></textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
@@ -43,6 +57,6 @@
     {{/each}}
   </div>
   {{/if}}
-</div> --}}
+</div>
 
 <script src="./js/profile.js"></script>
