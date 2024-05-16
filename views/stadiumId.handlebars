@@ -1,4 +1,6 @@
 
+<main>
+
   <h2>{{this.stadium}}</h2>
   <p>Team: {{this.team}}</p>
   <p>League: {{this.league}}</p>
@@ -12,3 +14,47 @@
     <p>No image available</p>
   {{/if}}
   </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3>Rate {{this.stadium}}</h3>
+
+        <form class="form new-stadium-form">
+          
+          <div class="form-group">
+            <label for="date-visited">Date Visited:</label>
+            <input class="form-input" type="date" id="date-visited" name="date_visited" />
+          </div>
+
+          <div><p>Rating</p></div>
+          <div class="form-group">
+          <div class="rate">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5" title="5 stars">5 stars</label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 stars">4 stars</label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 stars">3 stars</label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 stars">2 stars</label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 star">1 star</label>
+          </div></div>
+
+          <div class="form-group">
+            <label for="stadium-review">Review:</label>
+            <textarea class="form-input" id="stadium-review" name="review"></textarea>
+          </div>
+
+          <!-- Add hidden input fields for user_id and stadium_id -->
+          <label for="stadium-id">something here{{this.stadium_id}}</label>
+          <input type="hidden" id="stadium-id" name="stadium_id"  value="{{this.stadium_id}}" />
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
