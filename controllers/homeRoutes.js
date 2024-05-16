@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Stadium, User } = require("../models");
 const withAuth = require("../utils/auth");
+const wiki = require("wikipedia");
 
 router.get("/", async (req, res) => {
   const cardData = [
@@ -28,12 +29,88 @@ router.get("/", async (req, res) => {
   res.render("homepage", { cardData, logged_in: req.session.logged_in });
 });
 
-router.get("/:sport/stadiums", withAuth, async (req, res) => {
-  const sport = req.params.sport;
-  // Replace this with your logic to fetch and display stadiums associated with the sport
-  // This is just a placeholder for now
-  const stadiums = []; // Placeholder data
-  res.render("stadiums", { sport, stadiums }); // Pass sport and stadiums data to the template
+router.get("/stadiums/:league", withAuth, async (req, res) => {
+  try {
+    const league = req.params.league;
+
+    // Find all stadiums for the chosen league
+    const stadiums = await Stadium.findAll({
+      where: { league },
+    });
+
+    // Serialize all stadiums for template rendering
+    try {
+      const serializedStadiums = stadiums.map((stadium) =>
+        stadium.get({ plain: true })
+      );
+
+      // Fetch Wikipedia page and images for each stadium
+      const stadiumImages = await Promise.all(
+        serializedStadiums.map(async (stadium) => {
+          try {
+            const page = await wiki.page(stadium.stadium);
+            const images = await page.images();
+            if (images.length > 0) {
+              stadium.image = images[1].url; // Assuming the first image is the desired one
+            } else {
+              console.log("No images found for stadium:", stadium.stadium);
+            }
+            return stadium;
+          } catch (error) {
+            console.error(
+              "Error fetching Wikipedia page for stadium:",
+              stadium.stadium,
+              error
+            );
+            return stadium; // Return stadium without image
+          }
+        })
+      );
+
+      console.log("Stadiums with images:", stadiumImages);
+
+      res.render("leagueStadiums", {
+        stadiums: stadiumImages, // Pass array of stadiums with images
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      console.error(err); // Log the error for debugging
+      res.status(500).json({ message: "Error fetching stadiums" }); // Provide user-friendly error message
+    }
+  } catch (err) {
+    console.error(err); // Log the error for debugging
+    res.status(500).json({ message: "Error fetching stadiums" }); // Provide user-friendly error message
+  }
+});
+
+router.get("/api/stadiums/:id", withAuth, async (req, res) => {
+  try {
+    const stadiumData = await Stadium.findByPk(req.params.id, {
+      attributes: [
+        "stadium",
+        "team",
+        "league",
+        "division",
+        "city",
+        "state",
+        "image",
+      ],
+    });
+
+    const stadium = stadiumData.get({ plain: true });
+
+    const page = await wiki.page(stadium.stadium);
+    const images = await page.images();
+    stadium.image = images[4].url;
+    console.log(`${images[4].url} image should be here`);
+
+    res.render("stadiumId", {
+      ...stadium,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get("/profile", withAuth, async (req, res) => {

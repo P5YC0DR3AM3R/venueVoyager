@@ -176,3 +176,31 @@ input, textarea {
 .league-logo:hover {
   transform: scale(1.1);
 }
+
+.stadium-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stadium-card {
+  flex: 1 1 300px; 
+  margin: 10px; 
+  
+}
+
+.stadium-card img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.img-box{
+  width: 500px; 
+  height: 500px
+}
+
+.img-box img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+  }

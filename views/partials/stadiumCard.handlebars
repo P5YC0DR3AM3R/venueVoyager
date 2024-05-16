@@ -1,0 +1,15 @@
+<div class="stadium-card-container">
+  <div class="stadium-card">
+    <h3>{{ stadium }}</h3>
+    {{#if image}}
+      <img src="{{ image }}" alt="{{ stadium }}">
+    {{else}}
+      <p>No image available</p>
+    {{/if}}
+    
+    <p>{{ team }}</p>
+  </div>
+  <div>
+    <a href="/api/stadiums/{{ stadium_id }}">View Details</a>
+  </div>
+</div>
