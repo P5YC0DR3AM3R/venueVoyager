@@ -16,7 +16,7 @@ body {
 
 header {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--secondary-color);
   padding: 10px;
   text-align: center;
 }
@@ -58,6 +58,7 @@ button {
   background-color: var(--primary-color);
   color: var(--text-color);
   border: none;
+  border-radius: 20%;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -205,7 +206,6 @@ input, textarea {
     object-fit: cover; 
   }
 
-}
 .rate {
     float: left;
     height: 46px;
