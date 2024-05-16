@@ -1,48 +1,44 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
 
-{{!-- <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New stadium:</h3>
+<main class="main-content">
+  <div class="row">
+    <div class="col-auto">
+      <h2>Welcome, {{name}}!</h2>
+    </div>
 
-    <form class="form new-stadium-form">
-      <div class="form-group">
-        <label for="stadium-name">stadium name:</label>
-        <input class="form-input" type="text" id="stadium-name" name="stadium-name" />
-      </div>
-      <div class="form-group">
-        <label for="stadium-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="stadium-funding" name="stadium-funding" />
-      </div>
-      <div class="form-group">
-        <label for="stadium-desc">description:</label>
-        <textarea class="form-input" id="stadium-desc" name="stadium-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
   </div>
 
-  {{#if stadiums.length}}
-  <div class="col-md-6 stadium-list">
-    <h3>Current stadiums:</h3>
-
-    {{#each stadiums as |stadium|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/stadium/{{stadium.id}}">{{stadium.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{stadium.id}}">DELETE</button>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h2>Your Profile</h2>
+      <p>Welcome, {{username}}!</p>
+      <h3>Your Posts</h3>
+      <div class="posts">
+        {{#each posts}}
+        <div class="post">
+          <p>{{this.text}}</p>
+          <button data-id="{{this.id}}" class="delete-comment">Delete</button>
+        </div>
+        {{/each}}
       </div>
     </div>
-    {{/each}}
+
+    {{#if stadiums.length}}
+    <div class="col-md-6 stadium-list">
+      <h3>Current stadiums:</h3>
+
+      {{#each stadiums as |stadium|}}
+      <div class="row mb-2">
+        <div class="col-md-8">
+          <h4><a href="/stadium/{{stadium.id}}">{{stadium.name}}</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{stadium.id}}">DELETE</button>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
   </div>
-  {{/if}}
-</div> --}}
+</main>
 
 <script src="./js/profile.js"></script>
