@@ -17,13 +17,6 @@
   <h1>Pick Your League</h1>
   <div class="card-container">
     {{#each cardData}}
-    <a href="/{{this.title}}/stadiums">
-      <div class="card">
-        <img src="{{ this.logo }}" alt="{{ this.title }} Logo">
-        <h3>{{ this.title }}</h3>
-        <p>{{ this.description }}</p>
-      </div>
-    </a>
       <a href="/stadiums/{{this.title}}">  <div class="card">
           <img src="{{ this.logo }}" alt="{{ this.title }} Logo">  <h3>{{ this.title }}</h3>
           <p>{{ this.description }}</p>
