@@ -9,14 +9,25 @@
 
 /* General Styling */
 body {
-  background-color: var(--accent-color-light);
-  color: var(--secondary-color);
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: transparent;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  /* Add background image */
+  background-image: url('/assets/images/stadiumBackground.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 header {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--secondary-color);
   padding: 10px;
   text-align: center;
 }
@@ -39,8 +50,8 @@ nav a:hover {
 
 .main-content {
   padding: 20px;
-  background-color: var(--accent-color-light);
-  border: 1px solid var(--accent-color-dark);
+  background-color: transparent;
+  color: white;
 }
 
 footer {

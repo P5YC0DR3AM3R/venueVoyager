@@ -18,7 +18,7 @@ UserStadium.init(
       type: DataTypes.INTEGER,
       validate: {
         min: 1,
-        max: 5, // Adjust validation range as needed
+        max: 5,
       },
     },
     review: {

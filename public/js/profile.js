@@ -1,14 +1,20 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
-
-  const name = document.querySelector("#stadium-name").value.trim();
-  const rating = document.querySelector(".rate").value.trim();
+  console.log("plz work");
+  const id = document.querySelector("#stadium-id").value.trim();
+  const date = document.querySelector("#date-visited").value.trim();
+  const rating = document.querySelector("input[name='rating']:checked").value;
   const review = document.querySelector("#stadium-review").value.trim();
+  console.log(`
+  name:${id}
+  date:${date}
+  rating:${rating}
+  review:${review}`);
 
-  if (name && rating && review) {
-    const response = await fetch(`/api/stadiums`, {
+  if (id && date && rating && review) {
+    const response = await fetch(`/api/userStadium`, {
       method: "POST",
-      body: JSON.stringify({ name, rating, review }),
+      body: JSON.stringify({ id, date, rating, review }),
       headers: {
         "Content-Type": "application/json",
       },
