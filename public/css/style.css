@@ -16,7 +16,7 @@ body {
 
 header {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--secondary-color);
   padding: 10px;
   text-align: center;
 }
