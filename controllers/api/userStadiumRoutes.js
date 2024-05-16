@@ -4,34 +4,48 @@ const { UserStadium, Stadium, User } = require("../../models");
 // POST route to create a new UserStadium
 router.post("/", async (req, res) => {
   try {
-    const userStadiumData = await UserStadium.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userStadiumData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userStadiumData);
+    const userStadiumData = await UserStadium.create({
+      date_visited: req.body.date_visited,
+      rating: req.body.rating,
+      review: req.body.review,
+      user_id: req.body.user_id,
+      stadium_id: req.body.stadium_id,
     });
+    res.status(200).json(userStadiumData);
+    console.log(userStadiumData);
   } catch (err) {
     res.status(400).json(err);
+    console.log(err);
   }
 });
 
+router.put("/:id", async (req, res) => {
+  try {
+    const userStadiumData = await UserStadium.update(req.body, {
+      where: { id: req.params.id },
+    });
+    res.status(200).json(userStadiumData);
+    console.log(userStadiumData);
+  } catch (err) {
+    res.status(400).json(err);
+    console.log(err);
+  }
+});
 // GET route to retrieve all UserStadiums
 router.get("/", async (req, res) => {
   try {
     const userStadiumData = await UserStadium.findAll({
-      attributes: ["id", "date_visited", "rating", "review"],
-      include: [
-        {
-          model: Stadium,
-          attributes: ["stadium_id"],
-        },
-        {
-          model: User,
-          attributes: ["user_id"],
-        },
-      ],
+      // attributes: ["id", "date_visited", "rating", "review"],
+      // include: [
+      //   {
+      //     model: Stadium,
+      //     attributes: ["stadium_id"],
+      //   },
+      //   {
+      //     model: User,
+      //     attributes: ["user_id"],
+      //   },
+      // ],
     });
 
     const userStadiums = userStadiumData.map((userStadium) =>
@@ -40,7 +54,7 @@ router.get("/", async (req, res) => {
 
     res.json(userStadiums);
   } catch (err) {
-    res.status(500).console(err);
+    res.status(500).json(err);
   }
 });
 
@@ -48,17 +62,17 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const userStadiumData = await UserStadium.findByPk(req.params.id, {
-      attributes: ["id", "date_visited", "rating", "review"],
-      include: [
-        {
-          model: Stadium,
-          attributes: ["stadium_id"],
-        },
-        {
-          model: User,
-          attributes: ["user_id"],
-        },
-      ],
+      // attributes: ["id", "date_visited", "rating", "review"],
+      // include: [
+      //   {
+      //     model: Stadium,
+      //     attributes: ["stadium_id"],
+      //   },
+      //   {
+      //     model: User,
+      //     attributes: ["user_id"],
+      //   },
+      // ],
     });
 
     const userStadium = userStadiumData.get({ plain: true });
