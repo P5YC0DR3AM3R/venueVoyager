@@ -1,21 +1,22 @@
 const router = require("express").Router();
-const { UserStadium, Stadium, User } = require("../../models");
-
+const { UserStadium } = require("../../models");
+const withAuth = require("../../utils/auth");
 // POST route to create a new UserStadium
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
+  console.log(req.body);
   try {
     const userStadiumData = await UserStadium.create({
-      date_visited: req.body.date_visited,
+      date_visited: req.body.date,
       rating: req.body.rating,
       review: req.body.review,
-      user_id: req.body.user_id,
-      stadium_id: req.body.stadium_id,
+      user_id: req.session.user_id,
+      stadium_id: req.body.id,
     });
     res.status(200).json(userStadiumData);
     console.log(userStadiumData);
   } catch (err) {
-    res.status(400).json(err);
     console.log(err);
+    res.status(400).json(err);
   }
 });
 

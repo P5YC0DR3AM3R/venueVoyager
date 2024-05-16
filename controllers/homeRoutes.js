@@ -87,6 +87,7 @@ router.get("/api/stadiums/:id", withAuth, async (req, res) => {
   try {
     const stadiumData = await Stadium.findByPk(req.params.id, {
       attributes: [
+        "stadium_id",
         "stadium",
         "team",
         "league",
