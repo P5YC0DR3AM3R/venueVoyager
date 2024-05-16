@@ -26,10 +26,9 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/api/stadiums/:id", withAuth, async (req, res) => {
   try {
-    // Find a single stadium by its ID
-    const stadiumData = await Stadium.findall(req.params.id, {
+    const stadiumData = await Stadium.findByPk(req.params.id, {
       attributes: [
         "stadium_id",
         "stadium",
