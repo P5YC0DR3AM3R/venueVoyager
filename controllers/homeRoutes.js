@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { Stadium, User, UserStadium } = require("../models");
 const withAuth = require("../utils/auth");
-const wiki = require("wikipedia");
 
 router.get("/", async (req, res) => {
   const cardData = [
@@ -45,32 +44,32 @@ router.get("/stadiums/:league", withAuth, async (req, res) => {
       );
 
       // Fetch Wikipedia page and images for each stadium
-      const stadiumImages = await Promise.all(
-        serializedStadiums.map(async (stadium) => {
-          try {
-            const page = await wiki.page(stadium.stadium);
-            const images = await page.images();
-            if (images.length > 0) {
-              stadium.image = images[4].url; // Assuming the first image is the desired one
-            } else {
-              console.log("No images found for stadium:", stadium.stadium);
-            }
-            return stadium;
-          } catch (error) {
-            console.error(
-              "Error fetching Wikipedia page for stadium:",
-              stadium.stadium,
-              error
-            );
-            return stadium; // Return stadium without image
-          }
-        })
-      );
+      // const stadiumImages = await Promise.all(
+      //   serializedStadiums.map(async (stadium) => {
+      //     try {
+      //       const page = await wiki.page(stadium.stadium);
+      //       const images = await page.images();
+      //       if (images.length > 0) {
+      //         stadium.image = images[4].url; // Assuming the first image is the desired one
+      //       } else {
+      //         console.log("No images found for stadium:", stadium.stadium);
+      //       }
+      //       return stadium;
+      //     } catch (error) {
+      //       console.error(
+      //         "Error fetching Wikipedia page for stadium:",
+      //         stadium.stadium,
+      //         error
+      //       );
+      //       return stadium; // Return stadium without image
+      //     }
+      //   })
+      // );
 
-      console.log("Stadiums with images:", stadiumImages);
+      // console.log("Stadiums with images:", stadiumImages);
 
       res.render("leagueStadiums", {
-        stadiums: stadiumImages, // Pass array of stadiums with images
+        stadiums: serializedStadiums,
         logged_in: req.session.logged_in,
       });
     } catch (err) {
@@ -87,23 +86,18 @@ router.get("/api/stadiums/:id", withAuth, async (req, res) => {
   try {
     const stadiumData = await Stadium.findByPk(req.params.id, {
       attributes: [
-        "stadium_id",
+        "id",
         "stadium",
         "team",
         "league",
         "division",
         "city",
         "state",
-        "image",
+        "official_url",
       ],
     });
 
     const stadium = stadiumData.get({ plain: true });
-
-    const page = await wiki.page(stadium.stadium, stadium.team);
-    const images = await page.images();
-    stadium.image = images[4].url;
-    console.log(`${images[4].url} image should be here`);
 
     res.render("stadiumId", {
       ...stadium,

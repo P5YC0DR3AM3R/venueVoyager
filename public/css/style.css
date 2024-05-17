@@ -64,6 +64,11 @@ footer {
   width: 100%;
 }
 
+.footer-logo {
+  width: 300px;
+  height: 200px;
+}
+
 /* Buttons */
 button {
   background-color: var(--primary-color);

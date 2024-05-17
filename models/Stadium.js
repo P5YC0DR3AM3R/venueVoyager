@@ -5,13 +5,25 @@ class Stadium extends Model {}
 
 Stadium.init(
   {
-    stadium_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    stadium: {
+    stadium_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    official_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    stadium_name_clean: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    stadium_name_robust_clean: {
       type: DataTypes.STRING,
       allowNull: false,
     },
