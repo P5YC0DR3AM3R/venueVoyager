@@ -1,0 +1,117 @@
+<p>page works</p>
+
+{{!-- <main>
+  <div class="card mb-3" style="width: 100rem;">
+    {{#if userStadium.image}}
+      <img src="{{userStadium.image}}" class="card-img-top w-100" alt="{{userStadium.stadium}}">
+    {{else}}
+      <p>No image available</p>
+    {{/if}}
+    <div class="card-body">
+      <h2 class="card-title">{{userStadium.stadium}}</h2>
+      <p class="card-text">Team: {{userStadium.team}} League: {{userStadium.league}} Division: {{userStadium.division}}</p>
+      <p class="card-text">City: {{userStadium.city}} State: {{userStadium.state}} id: {{userStadium.id}}</p>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h3>Edit {{userStadium.stadium}}</h3>
+      <form class="form edit-stadium-form">
+        <div class="form-group">
+          <label for="date-visited">Date Visited:</label>
+          <input class="form-input" type="date" id="date-visited" name="date_visited" value="{{userStadium.date_visited}}" />
+        </div>
+
+        <div><p>Rating</p></div>
+        <div class="form-group">
+          <div class="rate">
+            <input type="radio" id="star5" name="rating" value="5" {{#if (userStadium.rating 5)}}checked{{/if}} />
+            <label for="star5" title="5 stars">5 stars</label>
+            <input type="radio" id="star4" name="rating" value="4" {{#if (userStadium.rating 4)}}checked{{/if}} />
+            <label for="star4" title="4 stars">4 stars</label>
+            <input type="radio" id="star3" name="rating" value="3" {{#if (userStadium.rating 3)}}checked{{/if}} />
+            <label for="star3" title="3 stars">3 stars</label>
+            <input type="radio" id="star2" name="rating" value="2" {{#if (userStadium.rating 2)}}checked{{/if}} />
+            <label for="star2" title="2 stars">2 stars</label>
+            <input type="radio" id="star1" name="rating" value="1" {{#if (userStadium.rating 1)}}checked{{/if}} />
+            <label for="star1" title="1 star">1 star</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="stadium-review">Review:</label>
+          <textarea class="form-input" id="stadium-review" name="review">{{userStadium.review}}</textarea>
+        </div>
+
+        <!-- Hidden input fields for IDs -->
+        <input type="hidden" id="stadium-id" name="stadium_id" value="{{userStadium.id}}" />
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<script src="/js/edit.js"></script> --}}
+
+  <div class="card mb-3" style="width: 100rem;">
+        {{#if this.image}}
+        <img src="{{this.image}}" class="card-img-top w-100" alt="{{this.stadium}}">
+        {{else}}
+        <p>No image available</p>
+        {{/if}}
+    <div class="card-body">
+      <h2 class="card-title">{{this.stadium}}</h2>
+      <p class="card-text">Team: {{this.team}} League: {{this.league}} Division: {{this.division}}</p>
+      <p class="card-text">City: {{this.city}} State: {{this.state}}</p>
+    </div>
+  </div>
+
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3>Rate {{stadium}}</h3>
+
+        <form class="form new-stadium-form">
+          
+          <div class="form-group">
+            <label for="date-visited">Date Visited:</label>
+            <input class="form-input" type="date" id="date-visited" name="date_visited" />
+          </div>
+
+          <div><p>Rating</p></div>
+          <div class="form-group">
+          <div class="rate">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5" title="5 stars">5 stars</label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 stars">4 stars</label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 stars">3 stars</label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 stars">2 stars</label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 star">1 star</label>
+          </div></div>
+
+          <div class="form-group">
+            <label for="stadium-review">Review:</label>
+            <textarea class="form-input" id="stadium-review" name="review"></textarea>
+          </div>
+
+          <!-- Add hidden input fields for user_id and stadium_id -->
+         
+          <input type="hidden" id="stadium-id" name="stadium_id"  value="{{this.stadium_id}}" />
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="/js/edit.js"></script>

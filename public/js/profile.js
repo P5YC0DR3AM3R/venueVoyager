@@ -1,53 +1,44 @@
-const newFormHandler = async (event) => {
-  event.preventDefault();
-  console.log("plz work");
-  const id = document.querySelector("#stadium-id").value.trim();
-  const date = document.querySelector("#date-visited").value.trim();
-  const rating = document.querySelector("input[name='rating']:checked").value;
-  const review = document.querySelector("#stadium-review").value.trim();
-  console.log(`
-  name:${id}
-  date:${date}
-  rating:${rating}
-  review:${review}`);
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelector(".userstadium-content")
+    .addEventListener("click", async (event) => {
+      if (event.target.classList.contains("edit-btn")) {
+        const stadiumId = event.target.getAttribute("data-id");
+        console.log("Stadium ID:", stadiumId);
+        window.location.href = `api/userStadium/edit/${stadiumId}`;
+      } else if (event.target.classList.contains("delete-btn")) {
+        const id = event.target.getAttribute("data-id");
+        const response = await fetch(`/api/userStadium/${id}`, {
+          method: "DELETE",
+        });
 
-  if (id && date && rating && review) {
-    const response = await fetch(`/api/stadiums`, {
-      method: "POST",
-      body: JSON.stringify({ id, date, rating, review }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+        if (response.ok) {
+          document.location.replace("/profile");
+        } else {
+          alert("Failed to delete stadium");
+        }
+      }
     });
+});
 
-    if (response.ok) {
-      document.location.replace("/profile");
-    } else {
-      alert("Failed to create stadium");
+document.addEventListener("DOMContentLoaded", () => {
+  const delButtonHandler = async (event) => {
+    if (event.target.classList.contains("delete-btn")) {
+      const id = event.target.getAttribute("data-id");
+
+      const response = await fetch(`/api/userStadium/${id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        document.location.replace("/profile");
+      } else {
+        alert("Failed to delete stadium");
+      }
     }
-  }
-};
+  };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
-
-    const response = await fetch(`/api/userStadium/${id}`, {
-      method: "DELETE",
-    });
-
-    if (response.ok) {
-      document.location.replace("/profile");
-    } else {
-      alert("Failed to delete stadium");
-    }
-  }
-};
-
-document
-  .querySelector(".userstadium-content")
-  .addEventListener("submit", newFormHandler);
-
-document
-  .querySelector(".userstadium-content")
-  .addEventListener("click", delButtonHandler);
+  document
+    .querySelector(".userstadium-content")
+    .addEventListener("click", delButtonHandler);
+});

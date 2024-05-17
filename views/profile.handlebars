@@ -17,7 +17,9 @@
                 <p class="card-text">Date Visited: {{date_visited}}</p>
                 <p class="card-text">Rating: {{rating}}</p>
                 <p class="card-text">Review: {{review}}</p>
-                <!-- Additional fields as needed -->
+                
+               
+                <button class="btn btn-sm btn-primary edit-btn" data-id="{{id}}">EDIT</button>
                 <button class="btn btn-sm btn-danger delete-btn" data-id="{{id}}">DELETE</button>
               </div>
             </div>
@@ -26,3 +28,5 @@
       </div>
     </div>
  </main>
+<script src="/js/profile.js"></script>
+<script src="/js/edit.js"></script>
