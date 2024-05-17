@@ -7,8 +7,7 @@
     "longitude": -82.4518,
     "stadium": "Amalie Arena",
     "city": "Tampa",
-    "state": "Florida",
-    "stadium_id": 1
+    "state": "Florida"
   },
   {
     "team": "Dallas Stars",
@@ -18,8 +17,7 @@
     "longitude": -96.810278,
     "stadium": "American Airlines Center",
     "city": "Dallas",
-    "state": "Texas",
-    "stadium_id": 2
+    "state": "Texas"
   },
   {
     "team": "Colorado Avalanche",
@@ -29,8 +27,7 @@
     "longitude": -105.0076,
     "stadium": "Ball Arena",
     "city": "Denver",
-    "state": "Colorado",
-    "stadium_id": 3
+    "state": "Colorado"
   },
   {
     "team": "Montreal Canadiens",
@@ -40,8 +37,7 @@
     "longitude": -73.569444,
     "stadium": "Bell Centre",
     "city": "Montreal",
-    "state": "Quebec",
-    "stadium_id": 4
+    "state": "Quebec"
   },
   {
     "team": "Nashville Predators",
@@ -51,8 +47,7 @@
     "longitude": -86.778611,
     "stadium": "Bridgestone Arena",
     "city": "Nashville",
-    "state": "Tennessee",
-    "stadium_id": 5
+    "state": "Tennessee"
   },
   {
     "team": "Winnipeg Jets",
@@ -62,8 +57,7 @@
     "longitude": -97.143611,
     "stadium": "Canada Life Centre",
     "city": "Winnipeg",
-    "state": "Manitoba",
-    "stadium_id": 6
+    "state": "Manitoba"
   },
   {
     "team": "Ottawa Senators",
@@ -73,8 +67,7 @@
     "longitude": -75.9268,
     "stadium": "Canadian Tire Centre",
     "city": "Ottawa",
-    "state": "Ontario",
-    "stadium_id": 7
+    "state": "Ontario"
   },
   {
     "team": "Washington Capitals",
@@ -84,8 +77,7 @@
     "longitude": -77.0209,
     "stadium": "Capital One Arena",
     "city": "Washington",
-    "state": "D.C.",
-    "stadium_id": 8
+    "state": "D.C."
   },
   {
     "team": "Seattle Kraken",
@@ -95,8 +87,7 @@
     "longitude": -122.354,
     "stadium": "Climate Pledge Arena",
     "city": "Seattle",
-    "state": "Washington",
-    "stadium_id": 9
+    "state": "Washington"
   },
   {
     "team": "Los Angeles Kings",
@@ -106,8 +97,7 @@
     "longitude": -118.267222,
     "stadium": "Crypto.com Arena",
     "city": "Los Angeles",
-    "state": "California",
-    "stadium_id": 10
+    "state": "California"
   },
   {
     "team": "St. Louis Blues",
@@ -117,8 +107,7 @@
     "longitude": -90.2025,
     "stadium": "Enterprise Center",
     "city": "St. Louis",
-    "state": "Missouri",
-    "stadium_id": 11
+    "state": "Missouri"
   },
   {
     "team": "Florida Panthers",
@@ -128,8 +117,7 @@
     "longitude": -80.325556,
     "stadium": "FLA Live Arena",
     "city": "Sunrise",
-    "state": "Florida",
-    "stadium_id": 12
+    "state": "Florida"
   },
   {
     "team": "Arizona Coyotes",
@@ -139,8 +127,7 @@
     "longitude": -112.2612,
     "stadium": "Gila River Arena",
     "city": "Glendale",
-    "state": "Arizona",
-    "stadium_id": 13
+    "state": "Arizona"
   },
   {
     "team": "Anaheim Ducks",
@@ -150,8 +137,7 @@
     "longitude": -117.876667,
     "stadium": "Honda Center",
     "city": "Anaheim",
-    "state": "California",
-    "stadium_id": 14
+    "state": "California"
   },
   {
     "team": "Buffalo Sabres",
@@ -161,8 +147,7 @@
     "longitude": -78.876389,
     "stadium": "KeyBank Center",
     "city": "Buffalo",
-    "state": "New York",
-    "stadium_id": 15
+    "state": "New York"
   },
   {
     "team": "Detroit Red Wings",
@@ -172,8 +157,7 @@
     "longitude": -83.055,
     "stadium": "Little Caesars Arena",
     "city": "Detroit",
-    "state": "Michigan",
-    "stadium_id": 16
+    "state": "Michigan"
   },
   {
     "team": "New York Rangers",
@@ -183,8 +167,7 @@
     "longitude": -73.993611,
     "stadium": "Madison Square Garden",
     "city": "New York",
-    "state": "New York",
-    "stadium_id": 17
+    "state": "New York"
   },
   {
     "team": "Columbus Blue Jackets",
@@ -194,8 +177,7 @@
     "longitude": -83.006111,
     "stadium": "Nationwide Arena",
     "city": "Columbus",
-    "state": "Ohio",
-    "stadium_id": 18
+    "state": "Ohio"
   },
   {
     "team": "Carolina Hurricanes",
@@ -205,8 +187,7 @@
     "longitude": -78.721944,
     "stadium": "PNC Arena",
     "city": "Raleigh",
-    "state": "North Carolina",
-    "stadium_id": 19
+    "state": "North Carolina"
   },
   {
     "team": "Pittsburgh Penguins",
@@ -216,8 +197,7 @@
     "longitude": -79.989167,
     "stadium": "PPG Paints Arena",
     "city": "Pittsburgh",
-    "state": "Pennsylvania",
-    "stadium_id": 20
+    "state": "Pennsylvania"
   },
   {
     "team": "New Jersey Devils",
@@ -227,8 +207,7 @@
     "longitude": -74.171111,
     "stadium": "Prudential Center",
     "city": "Newark",
-    "state": "New Jersey",
-    "stadium_id": 21
+    "state": "New Jersey"
   },
   {
     "team": "Vancouver Canucks",
@@ -238,8 +217,7 @@
     "longitude": -123.108889,
     "stadium": "Rogers Arena",
     "city": "Vancouver",
-    "state": "British Columbia",
-    "stadium_id": 22
+    "state": "British Columbia"
   },
   {
     "team": "Edmonton Oilers",
@@ -249,8 +227,7 @@
     "longitude": -113.497778,
     "stadium": "Rogers Place",
     "city": "Edmonton",
-    "state": "Alberta",
-    "stadium_id": 23
+    "state": "Alberta"
   },
   {
     "team": "San Jose Sharks",
@@ -260,8 +237,7 @@
     "longitude": -121.901111,
     "stadium": "SAP Center at San Jose",
     "city": "San Jose",
-    "state": "California",
-    "stadium_id": 24
+    "state": "California"
   },
   {
     "team": "Toronto Maple Leafs",
@@ -271,8 +247,7 @@
     "longitude": -79.379167,
     "stadium": "Scotiabank Arena",
     "city": "Toronto",
-    "state": "Ontario",
-    "stadium_id": 25
+    "state": "Ontario"
   },
   {
     "team": "Calgary Flames",
@@ -282,8 +257,7 @@
     "longitude": -114.0519,
     "stadium": "Scotiabank Saddledome",
     "city": "Calgary",
-    "state": "Alberta",
-    "stadium_id": 26
+    "state": "Alberta"
   },
   {
     "team": "Boston Bruins",
@@ -293,8 +267,7 @@
     "longitude": -71.062228,
     "stadium": "TD Garden",
     "city": "Boston",
-    "state": "Massachusetts",
-    "stadium_id": 27
+    "state": "Massachusetts"
   },
   {
     "team": "Vegas Golden Knights",
@@ -304,8 +277,7 @@
     "longitude": -115.178333,
     "stadium": "T-Mobile Arena",
     "city": "Las Vegas",
-    "state": "Nevada",
-    "stadium_id": 28
+    "state": "Nevada"
   },
   {
     "team": "New York Islanders",
@@ -315,8 +287,7 @@
     "longitude": -73.727157,
     "stadium": "UBS Arena",
     "city": "Elmont",
-    "state": "New York",
-    "stadium_id": 29
+    "state": "New York"
   },
   {
     "team": "Chicago Blackhawks",
@@ -326,19 +297,17 @@
     "longitude": -87.674167,
     "stadium": "United Center",
     "city": "Chicago",
-    "state": "Illinois",
-    "stadium_id": 30
+    "state": "Illinois"
   },
   {
-    "team": "Philadelphia Flyers",
+    "team": "Philadeliphia Flyers",
     "league": "NHL",
     "division": "Metropolitan",
     "latitude": 39.901111,
     "longitude": -75.171944,
     "stadium": "Wells Fargo Center",
     "city": "Philadelphia",
-    "state": "Pennsylvania",
-    "stadium_id": 31
+    "state": "Pennsylvania"
   },
   {
     "team": "Minnesota Wild",
@@ -348,8 +317,7 @@
     "longitude": -93.101111,
     "stadium": "Xcel Energy Center",
     "city": "Saint Paul",
-    "state": "Minnesota",
-    "stadium_id": 32
+    "state": "Minnesota"
   },
   {
     "team": "Las Vegas Raiders",
@@ -359,19 +327,17 @@
     "city": "Paradise",
     "state": "NV",
     "lat": 36.090833,
-    "long": -115.183611,
-    "stadium_id": 33
+    "long": -115.183611
   },
   {
-    "team": "Kansas City Chiefs",
+    "team": "Kansas City Cheifs",
     "league": "NFL",
     "division": "AFC West",
     "stadium": "Arrowhead Stadium",
     "city": "Kansas City",
     "state": "MO",
     "lat": 39.048889,
-    "long": -94.483889,
-    "stadium_id": 34
+    "long": -94.483889
   },
   {
     "team": "Dallas Cowboys",
@@ -381,8 +347,7 @@
     "city": "Arlington",
     "state": "TX",
     "lat": 32.747778,
-    "long": -97.092778,
-    "stadium_id": 35
+    "long": -97.092778
   },
   {
     "team": "Carolina Panthers",
@@ -392,8 +357,7 @@
     "city": "Charlotte",
     "state": "NC",
     "lat": 35.225833,
-    "long": -80.852778,
-    "stadium_id": 36
+    "long": -80.852778
   },
   {
     "team": "New Orleans Saints",
@@ -403,8 +367,7 @@
     "city": "New Orleans",
     "state": "LA",
     "lat": 29.950833,
-    "long": -90.081111,
-    "stadium_id": 37
+    "long": -90.081111
   },
   {
     "team": "Denver Broncos",
@@ -414,8 +377,7 @@
     "city": "Denver",
     "state": "CO",
     "lat": 39.7439,
-    "long": -105.0201,
-    "stadium_id": 38
+    "long": -105.0201
   },
   {
     "team": "Washington Football Team",
@@ -425,8 +387,7 @@
     "city": "Landover",
     "state": "MD",
     "lat": 38.907778,
-    "long": -76.864444,
-    "stadium_id": 39
+    "long": -76.864444
   },
   {
     "team": "Cleveland Browns",
@@ -436,8 +397,7 @@
     "city": "Cleveland",
     "state": "OH",
     "lat": 41.506111,
-    "long": -81.699444,
-    "stadium_id": 40
+    "long": -81.699444
   },
   {
     "team": "Detroit Lions",
@@ -447,8 +407,7 @@
     "city": "Detroit",
     "state": "MI",
     "lat": 42.34,
-    "long": -83.045556,
-    "stadium_id": 41
+    "long": -83.045556
   },
   {
     "team": "New England Patriots",
@@ -458,8 +417,7 @@
     "longitude": -71.264,
     "stadium": "Gillette Stadium",
     "city": "Foxborough",
-    "state": "MA",
-    "stadium_id": 42
+    "state": "MA"
   },
   {
     "team": "Miami Dolphins",
@@ -469,8 +427,7 @@
     "longitude": -80.238889,
     "stadium": "Hard Rock Stadium",
     "city": "Miami Gardens",
-    "state": "FL",
-    "stadium_id": 43
+    "state": "FL"
   },
   {
     "team": "Pittsburgh Steelers",
@@ -480,8 +437,7 @@
     "longitude": -80.015833,
     "stadium": "Heinz Field",
     "city": "Pittsburgh",
-    "state": "PA",
-    "stadium_id": 44
+    "state": "PA"
   },
   {
     "team": "Buffalo Bills",
@@ -491,8 +447,7 @@
     "longitude": -78.787,
     "stadium": "New Era Field",
     "city": "Orchard Park",
-    "state": "NY",
-    "stadium_id": 45
+    "state": "NY"
   },
   {
     "team": "Green Bay Packers",
@@ -502,8 +457,7 @@
     "longitude": -88.062222,
     "stadium": "Lambeau Field",
     "city": "Green Bay",
-    "state": "WI",
-    "stadium_id": 46
+    "state": "WI"
   },
   {
     "team": "San Francisco 49ers",
@@ -513,8 +467,7 @@
     "longitude": -121.97,
     "stadium": "Levi's Stadium",
     "city": "Santa Clara",
-    "state": "CA",
-    "stadium_id": 47
+    "state": "CA"
   },
   {
     "team": "Philadelphia Eagles",
@@ -524,8 +477,7 @@
     "longitude": -75.1675,
     "stadium": "Lincoln Financial Field",
     "city": "Philadelphia",
-    "state": "PA",
-    "stadium_id": 48
+    "state": "PA"
   },
   {
     "team": "Indianapolis Colts",
@@ -535,8 +487,7 @@
     "longitude": -86.163806,
     "stadium": "Lucas Oil Stadium",
     "city": "Indianapolis",
-    "state": "IN",
-    "stadium_id": 49
+    "state": "IN"
   },
   {
     "team": "Seattle Seahawks",
@@ -546,8 +497,7 @@
     "longitude": -122.3316,
     "stadium": "CenturyLink Field",
     "city": "Seattle",
-    "state": "WA",
-    "stadium_id": 50
+    "state": "WA"
   },
   {
     "team": "Baltimore Ravens",
@@ -557,8 +507,7 @@
     "longitude": -76.622778,
     "stadium": "M&T Bank Stadium",
     "city": "Baltimore",
-    "state": "MD",
-    "stadium_id": 51
+    "state": "MD"
   },
   {
     "team": "Atlanta Falcons",
@@ -568,8 +517,7 @@
     "longitude": -84.4,
     "stadium": "Mercedes-Benz Stadium",
     "city": "Atlanta",
-    "state": "Georgia",
-    "stadium_id": 52
+    "state": "Georgia"
   },
   {
     "team": "New York Giants",
@@ -579,8 +527,7 @@
     "longitude": -74.074361,
     "stadium": "MetLife Stadium",
     "city": "East Rutherford",
-    "state": "New Jersey",
-    "stadium_id": 53
+    "state": "New Jersey"
   },
   {
     "team": "New York Jets",
@@ -590,8 +537,7 @@
     "longitude": -74.074361,
     "stadium": "MetLife Stadium",
     "city": "East Rutherford",
-    "state": "New Jersey",
-    "stadium_id": 54
+    "state": "New Jersey"
   },
   {
     "team": "Tennessee Titans",
@@ -601,8 +547,7 @@
     "longitude": -86.771389,
     "stadium": "Nissan Stadium",
     "city": "Nashville",
-    "state": "Tennessee",
-    "stadium_id": 55
+    "state": "Tennessee"
   },
   {
     "team": "Houston Texans",
@@ -612,8 +557,7 @@
     "longitude": -95.410833,
     "stadium": "NRG Stadium",
     "city": "Houston",
-    "state": "Texas",
-    "stadium_id": 56
+    "state": "Texas"
   },
   {
     "team": "Cincinnati Bengals",
@@ -623,8 +567,7 @@
     "longitude": -84.516,
     "stadium": "Paul Brown Stadium",
     "city": "Cincinnati",
-    "state": "Ohio",
-    "stadium_id": 57
+    "state": "Ohio"
   },
   {
     "team": "Tampa Bay Buccaneers",
@@ -634,8 +577,7 @@
     "longitude": -82.503333,
     "stadium": "Raymond James Stadium",
     "city": "Tampa",
-    "state": "Florida",
-    "stadium_id": 58
+    "state": "Florida"
   },
   {
     "team": "Los Angeles Rams",
@@ -645,8 +587,7 @@
     "longitude": -118.3392,
     "stadium": "SoFi Stadium",
     "city": "Inglewood",
-    "state": "California",
-    "stadium_id": 59
+    "state": "California"
   },
   {
     "team": "Los Angeles Chargers",
@@ -656,8 +597,7 @@
     "longitude": -118.3392,
     "stadium": "SoFi Stadium",
     "city": "Inglewood",
-    "state": "California",
-    "stadium_id": 60
+    "state": "California"
   },
   {
     "team": "Chicago Bears",
@@ -667,8 +607,7 @@
     "longitude": -87.6167,
     "stadium": "Soldier Field",
     "city": "Chicago",
-    "state": "Illinois",
-    "stadium_id": 61
+    "state": "Illinois"
   },
   {
     "team": "Arizona Cardinals",
@@ -678,8 +617,7 @@
     "longitude": -112.263,
     "stadium": "State Farm Stadium",
     "city": "Glendale",
-    "state": "Arizona",
-    "stadium_id": 62
+    "state": "Arizona"
   },
   {
     "team": "Jacksonville Jaguars",
@@ -689,8 +627,7 @@
     "longitude": -81.6375,
     "stadium": "TIAA Bank Field",
     "city": "Jacksonville",
-    "state": "Florida",
-    "stadium_id": 63
+    "state": "Florida"
   },
   {
     "team": "Minnesota Vikings",
@@ -700,8 +637,7 @@
     "longitude": -93.258,
     "stadium": "U.S. Bank Stadium",
     "city": "Minneapolis",
-    "state": "Minnesota",
-    "stadium_id": 64
+    "state": "Minnesota"
   },
   {
     "team": "Dallas Mavericks",
@@ -711,8 +647,7 @@
     "longitude": -96.810278,
     "stadium": "American Airlines Center",
     "city": "Dallas",
-    "state": "Texas",
-    "stadium_id": 65
+    "state": "Texas"
   },
   {
     "team": "Orlando Magic",
@@ -722,8 +657,7 @@
     "longitude": -81.383611,
     "stadium": "Amway Center",
     "city": "Orlando",
-    "state": "Florida",
-    "stadium_id": 66
+    "state": "Florida"
   },
   {
     "team": "San Antonio Spurs",
@@ -733,8 +667,7 @@
     "longitude": -98.4375,
     "stadium": "AT&T Center",
     "city": "San Antonio",
-    "state": "Texas",
-    "stadium_id": 67
+    "state": "Texas"
   },
   {
     "team": "Denver Nuggets",
@@ -744,8 +677,7 @@
     "longitude": -105.0084,
     "stadium": "Ball Arena",
     "city": "Denver",
-    "state": "Colorado",
-    "stadium_id": 68
+    "state": "colorado"
   },
   {
     "team": "Brooklyn Nets",
@@ -755,8 +687,7 @@
     "city": "Brooklyn",
     "state": "New York",
     "latitude": 40.682661,
-    "longitude": -73.975225,
-    "stadium_id": 69
+    "longitude": -73.975225
   },
   {
     "team": "Washington Wizards",
@@ -766,8 +697,7 @@
     "city": "Washington",
     "state": "DC",
     "latitude": 38.8982,
-    "longitude": -77.0209,
-    "stadium_id": 70
+    "longitude": -77.0209
   },
   {
     "team": "Golden State Warriors",
@@ -777,30 +707,27 @@
     "city": "San Francisco",
     "state": "California",
     "latitude": 37.768056,
-    "longitude": -122.3875,
-    "stadium_id": 71
+    "longitude": -122.3875
   },
   {
     "team": "Los Angeles Clippers",
     "league": "NBA",
     "division": "West",
-    "stadium": "Crypto.com Arena",
+    "stadium": "Staples Center",
     "city": "Los Angeles",
     "state": "California",
     "latitude": 34.043056,
-    "longitude": -118.267222,
-    "stadium_id": 72
+    "longitude": -118.267222
   },
   {
     "team": "Los Angeles Lakers",
     "league": "NBA",
     "division": "West",
-    "stadium": "Crypto.com Arena",
+    "stadium": "Staples Center",
     "city": "Los Angeles",
     "state": "California",
     "latitude": 34.043056,
-    "longitude": -118.267222,
-    "stadium_id": 73
+    "longitude": -118.267222
   },
   {
     "team": "Memphis Grizzlies",
@@ -810,8 +737,7 @@
     "city": "Memphis",
     "state": "Tennessee",
     "latitude": 35.138333,
-    "longitude": -90.050556,
-    "stadium_id": 74
+    "longitude": -90.050556
   },
   {
     "team": "Milwaukee Bucks",
@@ -821,8 +747,7 @@
     "city": "Milwaukee",
     "state": "Wisconsin",
     "latitude": 43.045028,
-    "longitude": -87.918167,
-    "stadium_id": 75
+    "longitude": -87.918167
   },
   {
     "team": "Phoenix Suns",
@@ -832,8 +757,7 @@
     "city": "Phoenix",
     "state": "Arizona",
     "latitude": 33.445833,
-    "longitude": -112.071389,
-    "stadium_id": 76
+    "longitude": -112.071389
   },
   {
     "team": "Miami Heat",
@@ -843,8 +767,7 @@
     "city": "Miami",
     "state": "Florida",
     "latitude": 25.781389,
-    "longitude": -80.188056,
-    "stadium_id": 77
+    "longitude": -80.188056
   },
   {
     "team": "Indiana Pacers",
@@ -854,8 +777,7 @@
     "city": "Indianapolis",
     "state": "Indiana",
     "latitude": 39.763889,
-    "longitude": -86.155556,
-    "stadium_id": 78
+    "longitude": -86.155556
   },
   {
     "team": "Sacramento Kings",
@@ -865,8 +787,7 @@
     "city": "Sacramento",
     "state": "California",
     "latitude": 38.580361,
-    "longitude": -121.499611,
-    "stadium_id": 79
+    "longitude": -121.499611
   },
   {
     "team": "Detroit Pistons",
@@ -876,8 +797,7 @@
     "city": "Detroit",
     "state": "Michigan",
     "latitude": 42.341111,
-    "longitude": -83.055,
-    "stadium_id": 80
+    "longitude": -83.055
   },
   {
     "team": "New York Knicks",
@@ -887,8 +807,7 @@
     "city": "New York",
     "state": "New York",
     "latitude": 40.750556,
-    "longitude": -73.993611,
-    "stadium_id": 81
+    "longitude": -73.993611
   },
   {
     "team": "Portland Trail Blazers",
@@ -898,8 +817,7 @@
     "city": "Portland",
     "state": "Oregon",
     "latitude": 45.531667,
-    "longitude": -122.666667,
-    "stadium_id": 82
+    "longitude": -122.666667
   },
   {
     "team": "Oklahoma City Thunder",
@@ -909,8 +827,7 @@
     "city": "Oklahoma City",
     "state": "Oklahoma",
     "latitude": 35.463333,
-    "longitude": -97.515,
-    "stadium_id": 83
+    "longitude": -97.515
   },
   {
     "team": "Cleveland Cavaliers",
@@ -920,8 +837,7 @@
     "city": "Cleveland",
     "state": "Ohio",
     "latitude": 41.496389,
-    "longitude": -81.688056,
-    "stadium_id": 84
+    "longitude": -81.688056
   },
   {
     "team": "Toronto Raptors",
@@ -931,8 +847,7 @@
     "city": "Toronto",
     "state": "Ontario",
     "latitude": 43.643333,
-    "longitude": -79.379167,
-    "stadium_id": 85
+    "longitude": -79.379167
   },
   {
     "team": "New Orleans Pelicans",
@@ -942,8 +857,7 @@
     "city": "New Orleans",
     "state": "Louisiana",
     "latitude": 29.948889,
-    "longitude": -90.081944,
-    "stadium_id": 86
+    "longitude": -90.081944
   },
   {
     "team": "Charlotte Hornets",
@@ -953,8 +867,7 @@
     "city": "Charlotte",
     "state": "North Carolina",
     "latitude": 35.225,
-    "longitude": -80.839167,
-    "stadium_id": 87
+    "longitude": -80.839167
   },
   {
     "team": "Atlanta Hawks",
@@ -964,8 +877,7 @@
     "city": "Atlanta",
     "state": "Georgia",
     "latitude": 33.757222,
-    "longitude": -84.396389,
-    "stadium_id": 88
+    "longitude": -84.396389
   },
   {
     "team": "Minnesota Timberwolves",
@@ -975,8 +887,7 @@
     "city": "Minneapolis",
     "state": "Minnesota",
     "latitude": 44.9795,
-    "longitude": -93.2761,
-    "stadium_id": 89
+    "longitude": -93.2761
   },
   {
     "team": "Boston Celtics",
@@ -986,8 +897,7 @@
     "city": "Boston",
     "state": "Massachusetts",
     "latitude": 42.366303,
-    "longitude": -71.062228,
-    "stadium_id": 90
+    "longitude": -71.062228
   },
   {
     "team": "Houston Rockets",
@@ -997,8 +907,7 @@
     "city": "Houston",
     "state": "Texas",
     "latitude": 29.750833,
-    "longitude": -95.362222,
-    "stadium_id": 91
+    "longitude": -95.362222
   },
   {
     "team": "Chicago Bulls",
@@ -1008,8 +917,7 @@
     "city": "Chicago",
     "state": "Illinois",
     "latitude": 41.880556,
-    "longitude": -87.674167,
-    "stadium_id": 92
+    "longitude": -87.674167
   },
   {
     "team": "Utah Jazz",
@@ -1019,8 +927,7 @@
     "city": "Salt Lake City",
     "state": "Utah",
     "latitude": 40.768333,
-    "longitude": -111.901111,
-    "stadium_id": 93
+    "longitude": -111.901111
   },
   {
     "team": "Philadelphia 76ers",
@@ -1030,8 +937,7 @@
     "city": "Philadelphia",
     "state": "Pennsylvania",
     "latitude": 39.901111,
-    "longitude": -75.171944,
-    "stadium_id": 94
+    "longitude": -75.171944
   },
   {
     "team": "Minnesota United FC",
@@ -1041,8 +947,7 @@
     "longitude": -93.165,
     "stadium": "Allianz Field",
     "city": "Saint Paul",
-    "state": "Minnesota",
-    "stadium_id": 95
+    "state": "Minnesota"
   },
   {
     "team": "D.C. United",
@@ -1052,8 +957,7 @@
     "longitude": -77.012222,
     "stadium": "Audi Field",
     "city": "Washington",
-    "state": "District of Columbia",
-    "stadium_id": 96
+    "state": "District of Columbia"
   },
   {
     "team": "Los Angeles FC",
@@ -1063,8 +967,7 @@
     "longitude": -118.285,
     "stadium": "Banc of California Stadium",
     "city": "Los Angeles",
-    "state": "California",
-    "stadium_id": 97
+    "state": "California"
   },
   {
     "team": "Vancouver Whitecaps FC",
@@ -1074,8 +977,7 @@
     "longitude": -123.111944,
     "stadium": "BC Place",
     "city": "Vancouver",
-    "state": "British Columbia",
-    "stadium_id": 98
+    "state": "British Columbia"
   },
   {
     "team": "Toronto FC",
@@ -1085,8 +987,7 @@
     "longitude": -79.418611,
     "stadium": "BMO Field",
     "city": "Toronto",
-    "state": "Ontario",
-    "stadium_id": 99
+    "state": "Ontario"
   },
   {
     "team": "Sporting Kansas City",
@@ -1096,8 +997,7 @@
     "longitude": -94.8237,
     "stadium": "Children's Mercy Park",
     "city": "Kansas City",
-    "state": "Kansas",
-    "stadium_id": 100
+    "state": "Kansas"
   },
   {
     "team": "Colorado Rapids",
@@ -1107,8 +1007,7 @@
     "longitude": -104.891944,
     "stadium": "Dick's Sporting Goods Park",
     "city": "Commerce City",
-    "state": "Colorado",
-    "stadium_id": 101
+    "state": "Colorado"
   },
   {
     "team": "LA Galaxy",
@@ -1118,8 +1017,7 @@
     "longitude": -118.261111,
     "stadium": "Dignity Health Sports Park",
     "city": "Carson",
-    "state": "California",
-    "stadium_id": 102
+    "state": "California"
   },
   {
     "team": "Inter Miami CF",
@@ -1129,8 +1027,7 @@
     "longitude": -80.161111,
     "stadium": "DRV PNK Stadium",
     "city": "Fort Lauderdale",
-    "state": "Florida",
-    "stadium_id": 103
+    "state": "Florida"
   },
   {
     "team": "Orlando City SC",
@@ -1140,8 +1037,7 @@
     "longitude": -81.389036,
     "stadium": "Exploria Stadium",
     "city": "Orlando",
-    "state": "Florida",
-    "stadium_id": 104
+    "state": "Florida"
   },
   {
     "team": "New England Revolution",
@@ -1151,8 +1047,7 @@
     "longitude": -71.264344,
     "stadium": "Gillette Stadium",
     "city": "Foxborough",
-    "state": "Massachusetts",
-    "stadium_id": 105
+    "state": "Massachusetts"
   },
   {
     "team": "Columbus Crew",
@@ -1162,8 +1057,7 @@
     "longitude": -83.017089,
     "stadium": "Lower.com Field",
     "city": "Columbus",
-    "state": "Ohio",
-    "stadium_id": 106
+    "state": "Ohio"
   },
   {
     "team": "Seattle Sounders FC",
@@ -1173,8 +1067,7 @@
     "longitude": -122.3316,
     "stadium": "Lumen Field",
     "city": "Seattle",
-    "state": "Washington",
-    "stadium_id": 107
+    "state": "Washington"
   },
   {
     "team": "Atlanta United FC",
@@ -1184,8 +1077,7 @@
     "longitude": -84.401192,
     "stadium": "Mercedes-Benz Stadium",
     "city": "Atlanta",
-    "state": "Georgia",
-    "stadium_id": 108
+    "state": "Georgia"
   },
   {
     "team": "Nashville SC",
@@ -1195,8 +1087,7 @@
     "longitude": -86.771389,
     "stadium": "Nissan Stadium",
     "city": "Nashville",
-    "state": "Tennessee",
-    "stadium_id": 109
+    "state": "Tennessee"
   },
   {
     "team": "San Jose Earthquakes",
@@ -1206,8 +1097,7 @@
     "longitude": -121.925,
     "stadium": "PayPal Park",
     "city": "San Jose",
-    "state": "California",
-    "stadium_id": 110
+    "state": "California"
   },
   {
     "team": "Houston Dynamo FC",
@@ -1217,8 +1107,7 @@
     "longitude": -95.3524,
     "stadium": "PNC Stadium",
     "city": "Houston",
-    "state": "Texas",
-    "stadium_id": 111
+    "state": "Texas"
   },
   {
     "team": "Portland Timbers",
@@ -1228,8 +1117,7 @@
     "longitude": -122.691667,
     "stadium": "Providence Park",
     "city": "Portland",
-    "state": "Oregon",
-    "stadium_id": 112
+    "state": "Oregon"
   },
   {
     "team": "Austin FC",
@@ -1239,8 +1127,7 @@
     "longitude": -97.719864,
     "stadium": "Q2 Stadium",
     "city": "Austin",
-    "state": "Texas",
-    "stadium_id": 113
+    "state": "Texas"
   },
   {
     "team": "New York Red Bulls",
@@ -1250,8 +1137,7 @@
     "longitude": -74.150278,
     "stadium": "Red Bull Arena",
     "city": "Harrison",
-    "state": "New Jersey",
-    "stadium_id": 114
+    "state": "New Jersey"
   },
   {
     "team": "Real Salt Lake",
@@ -1261,8 +1147,7 @@
     "longitude": -111.893156,
     "stadium": "Rio Tinto Stadium",
     "city": "Sandy",
-    "state": "Utah",
-    "stadium_id": 115
+    "state": "Utah"
   },
   {
     "team": "CF Montréal",
@@ -1272,8 +1157,7 @@
     "longitude": -73.5525,
     "stadium": "Stade Saputo",
     "city": "Montreal",
-    "state": "Quebec",
-    "stadium_id": 116
+    "state": "Quebec"
   },
   {
     "team": "Chicago Fire FC",
@@ -1283,8 +1167,7 @@
     "longitude": -87.6167,
     "stadium": "Soldier Field",
     "city": "Chicago",
-    "state": "Illinois",
-    "stadium_id": 117
+    "state": "Illinois"
   },
   {
     "team": "Philadelphia Union",
@@ -1294,8 +1177,7 @@
     "longitude": -75.378889,
     "stadium": "Subaru Park",
     "city": "Chester",
-    "state": "Pennsylvania",
-    "stadium_id": 118
+    "state": "Pennsylvania"
   },
   {
     "team": "FC Dallas",
@@ -1305,8 +1187,7 @@
     "longitude": -96.835278,
     "stadium": "Toyota Stadium",
     "city": "Frisco",
-    "state": "Texas",
-    "stadium_id": 119
+    "state": "Texas"
   },
   {
     "team": "FC Cincinnati",
@@ -1316,8 +1197,7 @@
     "longitude": -84.522222,
     "stadium": "TQL Stadium",
     "city": "Cincinnati",
-    "state": "Ohio",
-    "stadium_id": 120
+    "state": "Ohio"
   },
   {
     "team": "New York City FC",
@@ -1327,8 +1207,7 @@
     "longitude": -73.926389,
     "stadium": "Yankee Stadium",
     "city": "New York City",
-    "state": "New York",
-    "stadium_id": 121
+    "state": "New York"
   },
   {
     "team": "Milwaukee Brewers",
@@ -1338,8 +1217,7 @@
     "longitude": -87.971111,
     "stadium": "American Family Field",
     "city": "Milwaukee",
-    "state": "Wisconsin",
-    "stadium_id": 122
+    "state": "Wisconsin"
   },
   {
     "team": "Los Angeles Angels",
@@ -1349,8 +1227,7 @@
     "longitude": -117.882778,
     "stadium": "Angel Stadium of Anaheim",
     "city": "Anaheim",
-    "state": "California",
-    "stadium_id": 123
+    "state": "California"
   },
   {
     "team": "St. Louis Cardinals",
@@ -1360,8 +1237,7 @@
     "longitude": -90.193056,
     "stadium": "Busch Stadium",
     "city": "St. Louis",
-    "state": "Missouri",
-    "stadium_id": 124
+    "state": "Missouri"
   },
   {
     "team": "Arizona Diamondbacks",
@@ -1371,8 +1247,7 @@
     "longitude": -112.066944,
     "stadium": "Chase Field",
     "city": "Phoenix",
-    "state": "Arizona",
-    "stadium_id": 125
+    "state": "Arizona"
   },
   {
     "team": "New York Mets",
@@ -1382,8 +1257,7 @@
     "longitude": -73.845833,
     "stadium": "Citi Field",
     "city": "New York City",
-    "state": "New York",
-    "stadium_id": 126
+    "state": "New York"
   },
   {
     "team": "Philadelphia Phillies",
@@ -1393,8 +1267,7 @@
     "longitude": -75.166389,
     "stadium": "Citizens Bank Park",
     "city": "Philadelphia",
-    "state": "Pennsylvania",
-    "stadium_id": 127
+    "state": "Pennsylvania"
   },
   {
     "team": "Detroit Tigers",
@@ -1404,8 +1277,7 @@
     "longitude": -83.048611,
     "stadium": "Comerica Park",
     "city": "Detroit",
-    "state": "Michigan",
-    "stadium_id": 128
+    "state": "Michigan"
   },
   {
     "team": "Colorado Rockies",
@@ -1415,8 +1287,7 @@
     "longitude": -104.994167,
     "stadium": "Coors Field",
     "city": "Denver",
-    "state": "Colorado",
-    "stadium_id": 129
+    "state": "Colorado"
   },
   {
     "team": "Los Angeles Dodgers",
@@ -1426,8 +1297,7 @@
     "longitude": -118.24,
     "stadium": "Dodger Stadium",
     "city": "Los Angeles",
-    "state": "California",
-    "stadium_id": 130
+    "state": "California"
   },
   {
     "team": "Boston Red Sox",
@@ -1437,8 +1307,7 @@
     "longitude": -71.09775,
     "stadium": "Fenway Park",
     "city": "Boston",
-    "state": "Massachusetts",
-    "stadium_id": 131
+    "state": "Massachusetts"
   },
   {
     "team": "Texas Rangers",
@@ -1448,8 +1317,7 @@
     "longitude": -97.084167,
     "stadium": "Globe Life Field",
     "city": "Arlington",
-    "state": "Texas",
-    "stadium_id": 132
+    "state": "Texas"
   },
   {
     "team": "Cincinnati Reds",
@@ -1459,8 +1327,7 @@
     "longitude": -84.506667,
     "stadium": "Great American Ball Park",
     "city": "Cincinnati",
-    "state": "Ohio",
-    "stadium_id": 133
+    "state": "Ohio"
   },
   {
     "team": "Chicago White Sox",
@@ -1470,8 +1337,7 @@
     "longitude": -87.633889,
     "stadium": "Guaranteed Rate Field",
     "city": "Chicago",
-    "state": "Illinois",
-    "stadium_id": 134
+    "state": "Illinois"
   },
   {
     "team": "Kansas City Royals",
@@ -1481,8 +1347,7 @@
     "longitude": -94.48,
     "stadium": "Kauffman Stadium",
     "city": "Kansas City",
-    "state": "Missouri",
-    "stadium_id": 135
+    "state": "Missouri"
   },
   {
     "team": "Miami Marlins",
@@ -1492,8 +1357,7 @@
     "longitude": -80.219722,
     "stadium": "LoanDepot Park",
     "city": "Miami",
-    "state": "Florida",
-    "stadium_id": 136
+    "state": "Florida"
   },
   {
     "team": "Houston Astros",
@@ -1503,8 +1367,7 @@
     "longitude": -95.355556,
     "stadium": "Minute Maid Park",
     "city": "Houston",
-    "state": "Texas",
-    "stadium_id": 137
+    "state": "Texas"
   },
   {
     "team": "Washington Nationals",
@@ -1514,8 +1377,7 @@
     "longitude": -77.0075,
     "stadium": "Nationals Park",
     "city": "Washington D.C.",
-    "state": "District of Columbia",
-    "stadium_id": 138
+    "state": "District of Columbia"
   },
   {
     "team": "Oakland Athletics",
@@ -1525,8 +1387,7 @@
     "longitude": -122.200556,
     "stadium": "Oakland Coliseum",
     "city": "Oakland",
-    "state": "California",
-    "stadium_id": 139
+    "state": "California"
   },
   {
     "team": "San Francisco Giants",
@@ -1536,8 +1397,7 @@
     "longitude": -122.389167,
     "stadium": "Oracle Park",
     "city": "San Francisco",
-    "state": "California",
-    "stadium_id": 140
+    "state": "California"
   },
   {
     "team": "Baltimore Orioles",
@@ -1547,8 +1407,7 @@
     "longitude": -76.621667,
     "stadium": "Oriole Park at Camden Yards",
     "city": "Baltimore",
-    "state": "Maryland",
-    "stadium_id": 141
+    "state": "Maryland"
   },
   {
     "team": "San Diego Padres",
@@ -1558,8 +1417,7 @@
     "longitude": -117.1566,
     "stadium": "Petco Park",
     "city": "San Diego",
-    "state": "California",
-    "stadium_id": 142
+    "state": "California"
   },
   {
     "team": "Pittsburgh Pirates",
@@ -1569,8 +1427,7 @@
     "longitude": -80.005833,
     "stadium": "PNC Park",
     "city": "Pittsburgh",
-    "state": "Pennsylvania",
-    "stadium_id": 143
+    "state": "Pennsylvania"
   },
   {
     "team": "Cleveland Guardians",
@@ -1580,8 +1437,7 @@
     "longitude": -81.685278,
     "stadium": "Progressive Field",
     "city": "Cleveland",
-    "state": "Ohio",
-    "stadium_id": 144
+    "state": "Ohio"
   },
   {
     "team": "Toronto Blue Jays",
@@ -1591,8 +1447,7 @@
     "longitude": -79.389167,
     "stadium": "Rogers Centre",
     "city": "Toronto",
-    "state": "Ontario",
-    "stadium_id": 145
+    "state": "Ontario"
   },
   {
     "team": "Seattle Mariners",
@@ -1602,8 +1457,7 @@
     "longitude": -122.333,
     "stadium": "T-Mobile Park",
     "city": "Seattle",
-    "state": "Washington",
-    "stadium_id": 146
+    "state": "Washington"
   },
   {
     "team": "Minnesota Twins",
@@ -1613,8 +1467,7 @@
     "longitude": -93.278333,
     "stadium": "Target Field",
     "city": "Minneapolis",
-    "state": "Minnesota",
-    "stadium_id": 147
+    "state": "Minnesota"
   },
   {
     "team": "Tampa Bay Rays",
@@ -1624,8 +1477,7 @@
     "longitude": -82.653333,
     "stadium": "Tropicana Field",
     "city": "St. Petersburg",
-    "state": "Florida",
-    "stadium_id": 148
+    "state": "Florida"
   },
   {
     "team": "Atlanta Braves",
@@ -1635,8 +1487,7 @@
     "longitude": -84.468,
     "stadium": "Truist Park",
     "city": "Atlanta",
-    "state": "Georgia",
-    "stadium_id": 149
+    "state": "Georgia"
   },
   {
     "team": "Chicago Cubs",
@@ -1646,8 +1497,7 @@
     "longitude": -87.655556,
     "stadium": "Wrigley Field",
     "city": "Chicago",
-    "state": "Illinois",
-    "stadium_id": 150
+    "state": "Illinois"
   },
   {
     "team": "New York Yankees",
@@ -1657,7 +1507,6 @@
     "longitude": -73.926389,
     "stadium": "Yankee Stadium",
     "city": "New York City",
-    "state": "New York",
-    "stadium_id": 151
+    "state": "New York"
   }
 ]

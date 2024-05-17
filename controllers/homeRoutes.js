@@ -126,7 +126,7 @@ router.get("/profile", withAuth, async (req, res) => {
       userStadium.get({ plain: true })
     );
     // Render profile.hbs with UserStadium data
-    res.render("profile", { userStadiums });
+    res.render("profile", { userStadiums, logged_in: true, });
   } catch (error) {
     console.error("Error retrieving UserStadium data:", error);
     res.status(500).send("Internal Server Error");
