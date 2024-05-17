@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/api/stadiums/:id", withAuth, async (req, res) => {
+router.get("/api/stadiums/:id", async (req, res) => {
   try {
     const stadiumData = await Stadium.findByPk(req.params.id, {
       attributes: [

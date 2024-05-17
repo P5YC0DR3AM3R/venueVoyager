@@ -12,7 +12,7 @@ const newFormHandler = async (event) => {
   review:${review}`);
 
   if (id && date && rating && review) {
-    const response = await fetch(`/api/userStadium`, {
+    const response = await fetch(`/api/stadiums`, {
       method: "POST",
       body: JSON.stringify({ id, date, rating, review }),
       headers: {
@@ -32,7 +32,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/stadiums/${id}`, {
+    const response = await fetch(`/api/userStadium/${id}`, {
       method: "DELETE",
     });
 
@@ -45,9 +45,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector(".new-stadium-form")
+  .querySelector(".userstadium-content")
   .addEventListener("submit", newFormHandler);
 
 document
-  .querySelector(".stadium-list")
+  .querySelector(".userstadium-content")
   .addEventListener("click", delButtonHandler);
