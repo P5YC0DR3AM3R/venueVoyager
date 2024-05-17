@@ -51,7 +51,7 @@ router.get("/stadiums/:league", withAuth, async (req, res) => {
             const page = await wiki.page(stadium.stadium);
             const images = await page.images();
             if (images.length > 0) {
-              stadium.image = images[1].url; // Assuming the first image is the desired one
+              stadium.image = images[4].url; // Assuming the first image is the desired one
             } else {
               console.log("No images found for stadium:", stadium.stadium);
             }
