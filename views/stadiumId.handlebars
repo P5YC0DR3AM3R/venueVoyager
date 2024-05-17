@@ -1,8 +1,8 @@
 <div class="card mb-3 p-2">
-  {{#if this.image}}
-  <img class="card-img-top w-50" src="{{this.image}}" alt="{{this.stadium}}">
+  {{#if this.official_url}}
+  <embed class="card-img-top w-50" src="{{this.official_url}}" alt="{{this.stadium}}">
   {{else}}
-  <p>No image available</p>
+  <p>No official url available</p>
   {{/if}}
   <div class="card-body">
     <h2 class="card-title">{{this.stadium}}</h2>
