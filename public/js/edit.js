@@ -21,9 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const review = document.querySelector("#stadium-review").value.trim();
 
     const rating = ratingElement ? ratingElement.value : null;
-
+    console.log(date, rating, review, id);
     if (id && date && rating && review) {
-      const response = await fetch(`/api/userStadium/edit/${id}`, {
+      console.log("please");
+      const response = await fetch(`/api/userStadium/${id}`, {
         method: "PUT",
         body: JSON.stringify({ date_visited: date, rating, review }),
         headers: {

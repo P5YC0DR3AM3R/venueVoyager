@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { UserStadium } = require("../../models");
+const { UserStadium, Stadium } = require("../../models");
 const withAuth = require("../../utils/auth");
 // POST route to create a new UserStadium
 router.post("/", withAuth, async (req, res) => {
@@ -97,22 +97,23 @@ router.delete("/:id", withAuth, async (req, res) => {
   }
 });
 
-router.get("/edit/:id", async (req, res) => {
+router.get("/edit/:id", withAuth, async (req, res) => {
   try {
     // Extract the stadium ID from the request parameters
     const userStadiumId = req.params.id;
 
     // Retrieve the details of the specific stadium being edited
-    const stadium = await UserStadium.findByPk(userStadiumId);
+    const stadiumData = await UserStadium.findByPk(userStadiumId);
 
     // Check if the stadium exists
-    if (!stadium) {
+    if (!stadiumData) {
       // If the stadium doesn't exist, return a 404 Not Found response
       return res.status(404).json({ message: "UserStadium not found" });
     }
-
+    const stadium = stadiumData.get({plain: true});
     // Render the edit page with the details of the specific stadium
-    res.render("editStadium", { stadium });
+    console.log(stadium);
+    res.render("editStadium", { stadium, logged_in: true });
   } catch (err) {
     // Handle any errors that occur during the database query or rendering process
     res.status(500).json(err);
