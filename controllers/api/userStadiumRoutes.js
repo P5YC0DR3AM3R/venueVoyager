@@ -35,19 +35,7 @@ router.put("/:id", async (req, res) => {
 // GET route to retrieve all UserStadiums
 router.get("/", withAuth, async (req, res) => {
   try {
-    const userStadiumData = await UserStadium.findAll(req.params.id, {
-      // attributes: ["id", "date_visited", "rating", "review"],
-      // include: [
-      //   {
-      //     model: Stadium,
-      //     attributes: ["stadium_id"],
-      //   },
-      //   {
-      //     model: User,
-      //     attributes: ["user_id"],
-      //   },
-      // ],
-    });
+    const userStadiumData = await UserStadium.findAll(req.params.id, {});
 
     const userStadiums = userStadiumData.map((userStadium) =>
       userStadium.get({ plain: true })
@@ -62,19 +50,7 @@ router.get("/", withAuth, async (req, res) => {
 // GET route to retrieve a specific UserStadium by id
 router.get("/:id", async (req, res) => {
   try {
-    const userStadiumData = await UserStadium.findByPk(req.params.id, {
-      // attributes: ["id", "date_visited", "rating", "review"],
-      // include: [
-      //   {
-      //     model: Stadium,
-      //     attributes: ["stadium_id"],
-      //   },
-      //   {
-      //     model: User,
-      //     attributes: ["user_id"],
-      //   },
-      // ],
-    });
+    const userStadiumData = await UserStadium.findByPk(req.params.id);
 
     const userStadium = userStadiumData.get({ plain: true });
 
@@ -113,13 +89,51 @@ router.delete("/:id", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
+    console.log("deleting", userStadiumData);
 
-    if (!userStadiumData) {
+    res.status(200).json(userStadiumData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/edit/:id", async (req, res) => {
+  try {
+    // Extract the stadium ID from the request parameters
+    const userStadiumId = req.params.id;
+
+    // Retrieve the details of the specific stadium being edited
+    const stadium = await UserStadium.findByPk(userStadiumId);
+
+    // Check if the stadium exists
+    if (!stadium) {
+      // If the stadium doesn't exist, return a 404 Not Found response
+      return res.status(404).json({ message: "UserStadium not found" });
+    }
+
+    // Render the edit page with the details of the specific stadium
+    res.render("editStadium", { stadium });
+  } catch (err) {
+    // Handle any errors that occur during the database query or rendering process
+    res.status(500).json(err);
+  }
+});
+
+// Handle update
+router.put("/:id", async (req, res) => {
+  try {
+    const userStadiumData = await UserStadium.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!userStadiumData[0]) {
       res.status(404).json({ message: "UserStadium not found." });
       return;
     }
 
-    res.status(200).json(userStadiumData);
+    res.status(200).json({ message: "UserStadium updated successfully." });
   } catch (err) {
     res.status(500).json(err);
   }

@@ -9,10 +9,9 @@
     <div class="card-body">
       <h2 class="card-title">{{this.stadium}}</h2>
       <p class="card-text">Team: {{this.team}} League: {{this.league}} Division: {{this.division}}</p>
-      <p class="card-text">City: {{this.city}} State: {{this.state}} id: {{this.id}}</p>
+      <p class="card-text">City: {{this.city}} State: {{this.state}}</p>
     </div>
   </div>
-</main>
 
 
     <div class="row mt-4">
@@ -47,7 +46,7 @@
           </div>
 
           <!-- Add hidden input fields for user_id and stadium_id -->
-          <label for="stadium-id">something here{{this.stadium_id}}</label>
+         
           <input type="hidden" id="stadium-id" name="stadium_id"  value="{{this.stadium_id}}" />
 
           <div class="form-group">
@@ -58,3 +57,4 @@
     </div>
   </div>
 </main>
+<script src="/js/submit.js"></script>
