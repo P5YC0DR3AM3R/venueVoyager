@@ -105,11 +105,12 @@ router.put("/:id", async (req, res) => {
 });
 
 // DELETE route to delete a specific UserStadium by id
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const userStadiumData = await UserStadium.destroy({
       where: {
         id: req.params.id,
+        user_id: req.session.user_id,
       },
     });
 

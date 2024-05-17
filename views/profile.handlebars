@@ -7,15 +7,22 @@
   </div>
 
   <h2>Your Stadium Visits</h2>
-    <div class="row">
-    {{#each userStadiums}}
-      <div class="col-md-6">
-        <h3>Stadium Visit</h3>
-        <p>Date Visited: {{date_visited}}</p>
-        <p>Rating: {{rating}}</p>
-        <p>Review: {{review}}</p>
-        <!-- Additional fields as needed -->
+    <div class="userstadium-content">
+      <div class="row">
+        {{#each userStadiums}}
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">Stadium Visit</h3>
+                <p class="card-text">Date Visited: {{date_visited}}</p>
+                <p class="card-text">Rating: {{rating}}</p>
+                <p class="card-text">Review: {{review}}</p>
+                <!-- Additional fields as needed -->
+                <button class="btn btn-sm btn-danger delete-btn" data-id="{{id}}">DELETE</button>
+              </div>
+            </div>
+          </div>
+        {{/each}}
       </div>
-    {{/each}}
-  </div>
+    </div>
  </main>
