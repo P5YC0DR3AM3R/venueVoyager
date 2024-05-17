@@ -33,9 +33,9 @@ router.put("/:id", async (req, res) => {
   }
 });
 // GET route to retrieve all UserStadiums
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
-    const userStadiumData = await UserStadium.findAll({
+    const userStadiumData = await UserStadium.findAll(req.params.id, {
       // attributes: ["id", "date_visited", "rating", "review"],
       // include: [
       //   {

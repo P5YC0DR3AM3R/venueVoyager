@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Stadium, User } = require("../models");
+const { Stadium, User, UserStadium } = require("../models");
 const withAuth = require("../utils/auth");
 const wiki = require("wikipedia");
 
@@ -114,25 +114,43 @@ router.get("/api/stadiums/:id", withAuth, async (req, res) => {
   }
 });
 
+// router.get("/profile", withAuth, async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const userData = await User.findByPk(req.session.user_id, {
+//       attributes: { exclude: ["password"] },
+//       // include: [{ model: Stadium, through: "user_stadiums" }],
+//     });
+
+//     const user = userData.get({ plain: true });
+
+//     res.render("profile", {
+//       ...user,
+//       logged_in: true,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      // include: [{ model: Stadium, through: "user_stadiums" }],
+    // Retrieve UserStadium data associated with the logged-in user
+    const userStadiumsData = await UserStadium.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
     });
-
-    const user = userData.get({ plain: true });
-
-    res.render("profile", {
-      ...user,
-      logged_in: true,
-    });
-  } catch (err) {
-    res.status(500).json(err);
+    const userStadiums = userStadiumsData.map((userStadium) =>
+      userStadium.get({ plain: true })
+    );
+    // Render profile.hbs with UserStadium data
+    res.render("profile", { userStadiums });
+  } catch (error) {
+    console.error("Error retrieving UserStadium data:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
-// Route to handle stadium listing for a specific sport (placeholder)
 
 router.get("/login", async (req, res) => {
   // If the user is already logged in, redirect the request to another route
