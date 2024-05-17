@@ -4,37 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/jass.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Venue Voyager</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-   <header>
-      <h1>Venue Voyager</h1>
+  {{> header}}
   
-      <nav>
-      <a href="/">Home</a>
-      <a href="/profile">Profile</a>
-     {{#if logged_in}}
-     <button id="logout" class="btn-no-style">Logout</button>
-     {{else}}
-      <a href="/login">Login</a>
-        {{/if}}
-  </nav>
-  </header><div class=>
-    <header class=>
-     
-  <main>
-   
-    <div >
-      {{{body}}}
-    </div>
-  </main>
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  <script src="/js/profile.js"></script>
+      <main>
+
+        <div>
+          {{{body}}}
+        </div>
+      </main>
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{/if}}
+      
+  {{>footer}}
 </body>
 
 </html>

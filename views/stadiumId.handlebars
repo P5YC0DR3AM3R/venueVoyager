@@ -1,19 +1,19 @@
 
-
 <main>
-  <h2>{{this.stadium}}</h2>
-  <p>Team: {{this.team}}</p>
-  <p>League: {{this.league}}</p>
-  <p>Division: {{this.division}}</p>
-  <p>City: {{this.city}}</p>
-  <p>State: {{this.state}}</p>
-  <div class="img-box">
-  {{#if this.image}}
-    <img src="{{this.image}}" alt="{{this.stadium}}">
-  {{else}}
-    <p>No image available</p>
-  {{/if}}
-</div>
+  <div class="card mb-3" style="width: 100rem;">
+        {{#if this.image}}
+        <img src="{{this.image}}" class="card-img-top w-100" alt="{{this.stadium}}">
+        {{else}}
+        <p>No image available</p>
+        {{/if}}
+    <div class="card-body">
+      <h2 class="card-title">{{this.stadium}}</h2>
+      <p class="card-text">Team: {{this.team}} League: {{this.league}} Division: {{this.division}}</p>
+      <p class="card-text">City: {{this.city}} State: {{this.state}} id: {{this.id}}</p>
+    </div>
+  </div>
+</main>
+
 
     <div class="row mt-4">
       <div class="col-md-6">
@@ -58,5 +58,3 @@
     </div>
   </div>
 </main>
-
-
