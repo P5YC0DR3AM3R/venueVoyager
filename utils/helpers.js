@@ -19,4 +19,7 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
+  singular_or_plural: (count, singular, plural) => {
+    return parseInt(count) === 1 ? singular : plural;
+  },
 };

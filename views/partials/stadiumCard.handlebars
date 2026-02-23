@@ -8,6 +8,13 @@
     {{/if}}
     
     <p>{{ team }}</p>
+    <p class="stadium-rating">
+      {{#if avg_rating}}
+        ⭐ {{ avg_rating }} / 5 ({{ rating_count }} {{singular_or_plural rating_count "rating" "ratings"}})
+      {{else}}
+        No ratings yet
+      {{/if}}
+    </p>
   </div>
   <div>
     <a href="/api/stadiums/{{ stadium_id }}">View Details</a>

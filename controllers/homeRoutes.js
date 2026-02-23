@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Stadium, User, UserStadium } = require("../models");
+const { fn, col, Op } = require("sequelize");
 const withAuth = require("../utils/auth");
 const wiki = require("wikipedia");
 
@@ -44,9 +45,39 @@ router.get("/stadiums/:league", withAuth, async (req, res) => {
         stadium.get({ plain: true })
       );
 
+      // Fetch average ratings for all stadiums in this league
+      const stadiumIds = serializedStadiums.map((s) => s.stadium_id);
+      const ratingsData = await UserStadium.findAll({
+        attributes: [
+          "stadium_id",
+          [fn("AVG", col("rating")), "avg_rating"],
+          [fn("COUNT", col("rating")), "rating_count"],
+        ],
+        where: { stadium_id: stadiumIds, rating: { [Op.ne]: null } },
+        group: ["stadium_id"],
+      });
+      const ratingsMap = {};
+      ratingsData.forEach((r) => {
+        const plain = r.get({ plain: true });
+        ratingsMap[plain.stadium_id] = {
+          avg_rating: plain.avg_rating
+            ? parseFloat(plain.avg_rating).toFixed(1)
+            : null,
+          rating_count: plain.rating_count || 0,
+        };
+      });
+
       // Fetch Wikipedia page and images for each stadium
       const stadiumImages = await Promise.all(
         serializedStadiums.map(async (stadium) => {
+          // Attach rating data
+          const ratingInfo = ratingsMap[stadium.stadium_id] || {
+            avg_rating: null,
+            rating_count: 0,
+          };
+          stadium.avg_rating = ratingInfo.avg_rating;
+          stadium.rating_count = ratingInfo.rating_count;
+
           try {
             const page = await wiki.page(stadium.stadium);
             const images = await page.images();
