@@ -3,6 +3,13 @@ module.exports = {
     // Format date as MM/DD/YYYY
     return date.toLocaleDateString();
   },
+  format_date_value: (date) => {
+    // Format date as YYYY-MM-DD for use in <input type="date">
+    if (!date) return "";
+    const d = new Date(date);
+    return d.toISOString().split("T")[0];
+  },
+  eq: (a, b) => a === b,
   format_amount: (amount) => {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
