@@ -16,4 +16,6 @@ Stadium.belongsToMany(User, {
   onDelete: "CASCADE",
 });
 
+UserStadium.belongsTo(Stadium, { foreignKey: "stadium_id" });
+
 module.exports = { User, Stadium, UserStadium };

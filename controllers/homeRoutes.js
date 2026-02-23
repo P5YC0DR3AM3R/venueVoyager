@@ -121,6 +121,7 @@ router.get("/profile", withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      include: [{ model: Stadium }],
     });
     const userStadiums = userStadiumsData.map((userStadium) =>
       userStadium.get({ plain: true })
