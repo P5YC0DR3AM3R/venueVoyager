@@ -1,3 +1,9 @@
+> **Status:** personal project. Not a Phygital-DevOps production app.
+>
+> Stadium review app. Express, Handlebars, Sequelize. Needs local Postgres. See .env.example.
+>
+> 2026 baseline: secrets stay out of source, Actions are pinned, placeholder packages are gone, CI checks this tree.
+
 # Venue Voyager
 
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
